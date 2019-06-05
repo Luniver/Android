@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="#03214e" >
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_gsm_search_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_search_unit"
+            android:paddingRight="3dp"
+            android:text="0"
+            android:textColor="#03fc36"
+            android:visibility="invisible"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_search_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="@string/tv_search_unit"
+            android:textColor="#ffffff"
+            android:visibility="invisible"
+            android:textSize="@dimen/textsize_19" />
+    </RelativeLayout>
+<!-- 	<TextView 
+	    android:layout_width="match_parent"
+	    android:layout_height="51dp"
+	    android:background="#03214e"
+	    android:text="@string/gsm_cell_seach_title"
+	    android:gravity="center_vertical|center_horizontal"
+	    android:textSize="@dimen/textsize_19"
+	    android:textColor="@color/white"/> -->
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="500dp" >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="530dp"
+	        android:orientation="vertical">
+           	<TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bg_choosemode"
+			    android:text="@string/tv_gsm_search_mode"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:textSize="@dimen/textsize_15"
+			    android:textColor="@color/white"/>			
+     		<RadioGroup
+			    android:id="@+id/rg_gsm_search_mode"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:orientation="horizontal" >
+			    <RadioButton
+			        android:id="@+id/rb_gsm_search_mode_full_frequency"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_search_mode_full_frequency"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+
+			    <RadioButton
+			        android:id="@+id/rb_gsm_search_mode_fixed_frequency"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:background="@null"
+			        android:button="@null"
+			        android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_search_mode_fixed_frequency"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+   			    <RadioButton
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:background="@null"
+			        android:button="@null"
+			        android:visibility="invisible"
+			        android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_search_mode_fixed_frequency"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+
+			</RadioGroup>
+        	<TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bg_choosemode"
+			    android:text="@string/tv_gsm_cell_seach_operator"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:textSize="@dimen/textsize_15"
+			    android:textColor="@color/white"/>
+	      	<RadioGroup
+			    android:id="@+id/rg_gsm_operators"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:orientation="horizontal" >
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_cell_seach_mobile_operator"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_cell_seach_mobile_operator"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_cell_seach_unicom_operator"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_cell_seach_unicom_operator"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			    
+			    <RadioButton
+			        android:id="@+id/rb_gsm_cell_seach_all_operator"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_cell_seach_all_operator"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			</RadioGroup>
+
+
+
+       		<TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bg_choosemode"
+			    android:text="@string/tv_gsm_captrue_mode"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:textSize="@dimen/textsize_15"
+			    android:textColor="@color/white"/>
+      		<RadioGroup
+			    android:id="@+id/rg_gsm_captrue_mode"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:orientation="horizontal" >
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_captrue_mode_rule"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_captrue_mode_rule"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_captrue_mode_multiple_capture"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_captrue_mode_multiple_capture"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			    
+  			    <RadioButton
+			        android:id="@+id/rb_gsm_captrue_mode_calling_capture"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_captrue_mode_calling_capture"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			</RadioGroup>
+    		<TextView 
+    		    android:id="@+id/tv_gsm_induced_mode"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bg_choosemode"
+			    android:text="@string/tv_gsm_induced_mode"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:textSize="@dimen/textsize_15"
+			    android:visibility="visible"
+			    android:textColor="@color/white"/>
+     		<RadioGroup
+			    android:id="@+id/rg_gsm_induced_mode"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:orientation="horizontal"
+			    android:visibility="visible" >
+  			    <RadioButton
+			        android:id="@+id/rb_gsm_induced_mode_induced_number_sms_content"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_induced_mode_induced_number_sms_content"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_induced_mode_induced_number"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:visibility="visible"
+			        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_induced_mode_induced_number"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_induced_mode_induced_sms_content"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:visibility="visible"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_induced_mode_induced_sms_content"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			    
+
+			</RadioGroup>
+	        <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bg_choosemode"
+			    android:text="@string/tv_gsm_monitoring_mode"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:textSize="@dimen/textsize_15"
+			    android:textColor="@color/white"
+			    android:visibility="gone"/>
+     		<RadioGroup
+			    android:id="@+id/rg_gsm_monitoring_mode_1"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:orientation="horizontal"
+			    android:visibility="gone" >
+ 			    <RadioButton
+			        android:id="@+id/rb_gsm_monitoring_mode_sms_voice"
+			        android:layout_width="0dp"
+			        android:layout_weight="2"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_monitoring_mode_sms_voice"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+     		    
+			    <RadioButton
+			        android:id="@+id/rb_gsm_monitoring_mode_sms"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_monitoring_mode_sms"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_monitoring_mode_voice"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="@string/rb_gsm_monitoring_mode_voice"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			</RadioGroup>
+
+			<LinearLayout 
+			    android:id="@+id/ll_gsm_freqs_1"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="5dp"
+			    android:visibility="gone"
+			    android:orientation="horizontal" >
+			    <EditText 
+			        android:id="@+id/edt_gsm_freq_1"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_1"
+                    android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+   			    <EditText 
+			        android:id="@+id/edt_gsm_freq_2"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_2"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+   			    <EditText 
+			        android:id="@+id/edt_gsm_freq_3"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_3"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+   			    <EditText 
+			        android:id="@+id/edt_gsm_freq_4"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_4"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+			</LinearLayout>
+			<LinearLayout 
+			    android:id="@+id/ll_gsm_freqs_2"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="5dp"
+			    android:visibility="gone"
+			    android:orientation="horizontal" >
+			    <EditText 
+			        android:id="@+id/edt_gsm_freq_5"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_5"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+   			    <EditText 
+			        android:id="@+id/edt_gsm_freq_6"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_6"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+   			    <EditText 
+			        android:id="@+id/edt_gsm_freq_7"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_7"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+   			    <EditText 
+			        android:id="@+id/edt_gsm_freq_8"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:gravity="center_horizontal"
+			        android:hint="@string/edt_freq_8"
+			        android:inputType="number"
+                    android:maxLength="5"
+			        android:textColor="#ffffff"
+			        android:background="@drawable/edt_input"/>
+			</LinearLayout>
+			<TextView 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tv_locate_information"
+	            android:gravity="center_horizontal|center_vertical"
+	            android:textColor="#ffffff"
+	            android:background="@drawable/bg_choosemode"
+	            android:textSize="@dimen/textsize_15"/>
+			
+			<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_gsm_target_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_15" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="40dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/light_blue"
+                        android:text="@string/tv_target_num"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+            
+			<View style="@style/line_gray_night" />
+			<LinearLayout
+		        android:id="@+id/ll_target_country"
+		        android:layout_width="match_parent"
+		        android:layout_height="52.5dp"
+		        android:gravity="center_vertical"
+		        android:visibility="gone"
+		        android:orientation="horizontal" >
+		
+		        <RelativeLayout
+		            android:id="@+id/rala_chose_country_gsm"
+		            android:layout_width="0dp"
+		            android:layout_weight="8"
+		            android:layout_height="48dp" >
+		
+		            <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="10dp"
+		                android:text="@string/Countries_And_Regions_Induce"
+		                android:textColor="@color/white"
+		                android:textSize="19sp" />
+		
+		            <TextView
+		                android:id="@+id/tv_chosed_country_gsm"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+		                android:layout_centerVertical="true"
+		                android:layout_marginRight="10dp"
+		                android:text="@string/Country"
+		                android:textColor="@color/white"
+		                android:textSize="19sp" />
+		            
+
+		
+		<!--             <View
+		                android:layout_width="match_parent"
+		                android:layout_height="0.1dp"
+		                android:layout_alignParentBottom="true"
+		                android:background="#dbdbdb" /> -->
+		        </RelativeLayout>
+		        <TextView
+		                android:id="@+id/tv_country_gsm"
+		                android:layout_width="0dp"
+		                android:layout_weight="2"
+		                android:layout_height="wrap_content"
+		                android:layout_marginRight="10dp"
+		                android:text="+86"
+		                android:textColor="@color/white"
+		                android:textSize="19sp" />
+		    </LinearLayout>
+		    <View style="@style/line_gray_night" />
+			<RelativeLayout
+			    android:id="@+id/rel_gsm_induced_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputInducedNumber" >
+
+                <TextView
+                    android:id="@+id/tv_gsm_induced_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="@string/required"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_15" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="40dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/light_blue"
+                        android:text="@string/tv_induced_num"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+			<View style="@style/line_gray_night" />
+			<RelativeLayout
+			    android:id="@+id/rel_gsm_inputTargetIMSI"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:onClick="inputTargetIMSI" >
+
+                <TextView
+                    android:id="@+id/tv_gsm_target_imsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_15" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="21dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/light_blue"
+                        android:text="@string/tv_target_imsi"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+			<View style="@style/line_gray_night" />
+			<RelativeLayout
+			    android:id="@+id/rel_gsm_threshold_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputThresholdValue" >
+
+                <TextView
+                    android:id="@+id/tv_gsm_threshold_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:text="5"
+                    android:hint="@string/optional"
+                    android:textSize="@dimen/textsize_15" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="164dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="33dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/tv_threshold_value"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+
+                </LinearLayout>
+            </RelativeLayout>
+			<View style="@style/line_gray_night" />
+			<RelativeLayout
+			    android:id="@+id/rel_gsm_rsvd_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputRsvdValue" >
+
+                <TextView
+                    android:id="@+id/tv_gsm_rsvd_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:hint="选填"
+                    android:textSize="@dimen/textsize_15" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="164dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="33dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="MNC"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+
+                </LinearLayout>
+            </RelativeLayout>
+			<View style="@style/line_gray_night" />
+			
+			<TextView 
+			    android:id="@+id/rg_gsm_title"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/bg_choosemode"
+			    android:text="频段选择"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:textSize="@dimen/textsize_15"
+			    android:textColor="@color/white"
+			    android:visibility="gone"
+			    />
+			<RadioGroup
+			    android:id="@+id/rg_gsm_test"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="15dp"
+			    android:orientation="horizontal" 
+			    android:visibility="gone"
+			    >
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_test0"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="0"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" 
+			        android:checked="true"
+			        />
+			
+			    <RadioButton
+			        android:id="@+id/rb_gsm_test1"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="1"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			    
+			    <RadioButton
+			        android:id="@+id/rb_gsm_test2"
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+		   	        android:background="@null"
+					android:button="@null"
+					android:drawableLeft="@drawable/rg_bg"
+			        android:text="2"
+			        android:textColor="#ffffff"
+			        android:textSize="@dimen/textsize_15" />
+			
+			</RadioGroup>
+			
+	    </LinearLayout> 
+	    
+	    
+	    
+	    
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_locate_gsm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_next_style"
+        android:text="@string/locate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_19" />
+</LinearLayout>

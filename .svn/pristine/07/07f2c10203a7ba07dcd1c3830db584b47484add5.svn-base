@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title_dt_dialog"
+        style="@style/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_dt_mode_conf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_dt_dialog"
+        android:background="@drawable/popup_body"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg_select_dt_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_close_dt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="关闭数传"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_open_dt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="开启数传"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dt_setting_containter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_dt_mode_conf_freq"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dt_mode_conf_freq"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edt_dt_mode_conf_freq"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edt_input"
+                    android:digits="0123456789"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="MHz" />
+
+                <Button
+                    android:id="@+id/btn_frequency_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/second_height_40"
+                    android:background="@drawable/btn_selector_sczd"
+                    android:text="@string/frequency_setting"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/textsize_17" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_dt_868_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_dt_mode_conf_freq"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/ll_dt_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/dt_mode"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/dt_mode_self"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sp_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_dt_mode"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tran_mode"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/dt_mode_receive"
+                        android:textSize="20sp" />
+
+                    <!--<Spinner-->
+                    <!--android:id="@+id/sp_tran_mode"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:entries="@array/tran_mode" />-->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_433_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_dt_mode_conf_freq"
+                android:visibility="invisible">
+
+                <Button
+                    android:id="@+id/btn_system_self_check"
+                    style="@style/PrimaryButton"
+                    android:text="@string/system_self_check" />
+
+                <Button
+                    android:id="@+id/btn_mcu_firm_upgrade"
+                    style="@style/PrimaryButton"
+                    android:layout_below="@id/btn_system_self_check"
+                    android:text="@string/firmware_update" />
+
+                <Button
+                    android:id="@+id/btn_version_query"
+                    style="@style/PrimaryButton"
+                    android:layout_below="@id/btn_mcu_firm_upgrade"
+                    android:text="@string/check_version" />
+
+                <Button
+                    android:id="@+id/btn_flash_version_query"
+                    style="@style/PrimaryButton"
+                    android:layout_below="@id/btn_version_query"
+                    android:text="@string/check_flash_version" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_flash_version_query"
+                    android:layout_margin="@dimen/margin_10"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_dt_mode_conf_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/fillet_select_bg"
+                android:text="@string/cancel"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btn_dt_mode_conf_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/fillet_select_bg"
+                android:text="@string/ok"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

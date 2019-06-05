@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	@author   赵耿忠
+	@describe 读取mcuLog信息
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:padding="20dp"
+       android:orientation="vertical">
+       <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="90dp"
+               android:layout_height="wrap_content"
+               android:textSize="18dp"
+               android:gravity="center"
+               android:text="Core:" />
+
+           <EditText
+               android:id="@+id/et_core"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:inputType="number" />
+
+       </LinearLayout>
+       <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="90dp"
+               android:layout_height="wrap_content"
+               android:textSize="18dp"
+               android:text="LogLevel:" />
+
+           <EditText
+               android:id="@+id/et_loglevel"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:inputType="number" />
+
+       </LinearLayout>
+       <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginTop="20dp"
+           android:orientation="horizontal">
+       		<Button
+       		    android:id="@+id/btn_setloglevel"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:padding="15dp"
+       		    android:text="@string/set" />
+       		<Button
+       		    android:id="@+id/btn_gainloglevel"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:layout_marginLeft="40dp"
+       		    android:padding="15dp"
+       		    android:text="@string/gain" />    
+       </LinearLayout>
+   </LinearLayout>
+
+</RelativeLayout>

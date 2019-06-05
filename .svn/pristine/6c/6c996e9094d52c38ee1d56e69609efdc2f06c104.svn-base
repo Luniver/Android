@@ -1,0 +1,282 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_top_icon_nul"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:orientation="vertical" />
+
+        <!-- 检查设置内容栏 -->
+
+        <LinearLayout
+            android:id="@+id/ll_setting_detection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_setting_detection_more"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17.5dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/wait_time"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <hrst.sczd.view.DropEditText
+                    android:id="@+id/ed_detection_outtime"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.0"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/light_blue"
+                    android:textSize="19sp"
+                    drop:drawableRight="@drawable/drop"
+                    drop:dropMode="wrap_content" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/time_ms"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17.5dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/notification_phone"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <EditText
+                    android:id="@+id/ed_notification_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:textColorHint="@color/light_gray"
+                    android:hint="点击输入号码"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/light_blue"
+                    android:textSize="19sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 图标 -->
+
+        <LinearLayout
+            android:id="@+id/ll_top_icon"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@android:color/black"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_light" />
+
+            <TextView
+                android:id="@+id/tv_ligth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/target_unstart"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <!-- 检测设置标题栏 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_detection_more"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/ll_top_icon"
+            android:background="#03214e">
+
+            <View
+                style="@style/title_line"
+                android:layout_alignParentTop="true" />
+
+            <View
+                style="@style/title_line"
+                android:layout_alignParentBottom="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17.5dp"
+                android:text="@string/setting_detection"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_detection_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/up"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_result_detection_more_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_setting_detection"
+            android:layout_marginBottom="@dimen/first_height_52.5"
+            android:orientation="vertical">
+            <!-- 检测结果标题栏 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_result_detection_more"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#03214e">
+
+                <View
+                    style="@style/title_line"
+                    android:layout_alignParentTop="true" />
+
+                <View
+                    style="@style/title_line"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17.5dp"
+                    android:text="@string/result_detection"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_detection_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/rubbish"
+                        android:clickable="true" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_detection_result_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/up"
+                    android:clickable="true" />
+            </RelativeLayout>
+            <!-- 检测结果内容栏 -->
+
+            <LinearLayout
+                android:id="@+id/ll_result_detection"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/rl_result_detection_more">
+
+                <ScrollView
+                    android:id="@+id/sv_induce"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/tv_detection_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detection"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_enddetection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/enddetection"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_detection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:text="@string/detection"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

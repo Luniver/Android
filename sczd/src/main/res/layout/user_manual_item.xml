@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@drawable/bg_layout_selector"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_user_manual_log"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:padding="2dip"
+        android:src="@drawable/bluetooth" />
+
+    <TextView
+        android:id="@+id/tv_user_manual_title"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toRightOf="@id/iv_user_manual_log"
+        android:drawableRight="@drawable/input"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"
+        android:text="说明内容"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#161616" />
+
+</RelativeLayout>

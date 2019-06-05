@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- 二级标题栏高度 -->
+    <dimen name="secondary_title_bar_height">30dp</dimen>
+    <!-- 二级标题栏左边距 -->
+    <dimen name="secondary_title_bar_left">17.5dp</dimen>
+	<!-- 间距 -->
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <!-- 第一高度 -->
+    <dimen name="first_height_52.5">52.5dp</dimen>
+    
+    <!-- 第二高度 -->
+    <dimen name="second_height_40">40dp</dimen>
+    
+    <!-- 字体大小 -->
+    <dimen name="textsize_38.5">38.5sp</dimen>
+    <dimen name="textsize_24">24sp</dimen>
+    <dimen name="textsize_21.5">21.5sp</dimen>
+    <dimen name="textsize_19">19sp</dimen>
+    <dimen name="textsize_17">17sp</dimen>
+    <dimen name="textsize_16">13sp</dimen>
+    <dimen name="textsize_15">15sp</dimen>
+    <dimen name="textsize_13">13sp</dimen>
+    <dimen name="textsize_12.5">12.5sp</dimen>
+    <dimen name="textsize_12">12sp</dimen>
+    <dimen name="textsize_11">12sp</dimen>
+	<dimen name="textsize_5">5sp</dimen> 
+	<dimen name="textsize_10">10sp</dimen>  
+	<dimen name="textsize_25">25sp</dimen> 
+	<dimen name="textsize_50">50sp</dimen> 
+	<dimen name="textsize_28">28sp</dimen> 
+	<dimen name="textsize_21">21sp</dimen>
+    <dimen name="textsize_22">22sp</dimen>
+    <dimen name="textsize_27">27sp</dimen>
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- popwindow -->
+    <dimen name="popmenu_width">50dp</dimen>
+    <dimen name="popmenu_yoff">0.0dp</dimen>
+    <dimen name="btn_width_100">100dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="tab_width">40dp</dimen>
+</resources>

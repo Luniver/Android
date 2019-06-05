@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+         android:button="@drawable/freq_check_selector"
+        android:clickable="false"
+          android:layout_gravity="center_horizontal"
+          android:gravity="center_horizontal"
+        android:focusable="false"
+        android:layout_marginTop="13dp"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:id="@+id/tv_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="17sp"/>
+
+    
+
+</LinearLayout>

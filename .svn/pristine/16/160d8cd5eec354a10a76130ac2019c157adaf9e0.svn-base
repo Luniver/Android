@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+       style="@style/dialog_title"
+       android:text="@string/dialog_dec_conf" />
+    
+    <LinearLayout 
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_body"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical">
+        
+        <LinearLayout 
+            android:id="@+id/ll_crnti_conf_crnti_cid"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIME(ms):"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_dec_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edt_input"
+                android:maxLength="9"
+                android:text="2000"
+                android:inputType="number"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+          
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        	<Button 
+				android:id="@+id/btn_dec_cancel"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/fillet_select_bg"
+				android:textColor="#fff"
+				android:textSize="22sp"
+				android:text="@string/cancel"/>
+       		<Button 
+				android:id="@+id/btn_dec_ok"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="10dp"
+				android:background="@drawable/fillet_select_bg"
+				android:textColor="#fff"
+				android:textSize="22sp"
+				android:text="@string/ok"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

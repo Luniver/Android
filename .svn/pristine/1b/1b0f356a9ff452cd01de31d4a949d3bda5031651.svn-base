@@ -1,0 +1,29 @@
+
+## 概述:
+
+慧睿思通测向产品 android 项目集合管理:
+
+    1. 所含项目: LTE单兵测向, 车载, 数传终端, Wifi 定位
+    2. git管理:
+        每个具有独立功能的子模块各自使用一个git仓库管理,
+        最外层的git仓库再统一管理所有模块(公共模块和各个具有独立功能的模块)
+    3. setting.gradle 可打开或关闭模块
+
+## 项目模块说明
+
+|模块     |   说明 (具体请查看各模块readme)     |   依赖  |
+|-----   | ----- |  :----:|
+|common_lib   | 1. 共用lib, aar <br> 2. 常用工具类 <br> 3. Logger模块  | 无
+|ble_lib   | 兼容经典和ble蓝牙 <br> 具体说明见对应模块下readme  | 无
+|fragmentaion_core   |对activity+fragment结构更容易管理, 调试, fragment 生命周期 | common_lib
+|sms_induce   | 诱发功能封装  | common_lib
+| share_ui  | 公用UI模块 <br> 1. 号码管理功能 <br> 2. 诱发模块 <br> 3. dialog等自定义控件 <br> 4.待补充 | common_lib <br> ble_lib <br> fragmentation_core <br> sms_induce
+|wifi_location   | wifi定位项目  | share_ui
+|sczd   | 数传终端项目  | share_ui
+|safesms   | 车载项目  | share_ui
+|singlepawn   | 单兵项目 | share_ui
+| 未完待续   | ...  |
+|   |   |
+
+## git 同步流程
+1.

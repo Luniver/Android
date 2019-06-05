@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   	<LinearLayout
+		android:id="@+id/layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" >
+		
+		<LinearLayout
+		    android:id="@+id/titlelayout"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+		</LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_system_setting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/serial_number_check"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl_devices"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                
+                <RadioButton
+	                android:id="@+id/rb_voice_prompt_setting"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/radiobtn_selector"
+	                android:button="@null"
+	                android:padding="12dp"
+	                android:gravity="center"
+	                android:text="@string/voice_prompt_setting"
+	                android:textColor="#ffffff"
+	                android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                style="@style/line_ver_night"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0" />
+            
+			<RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+                
+                <RadioButton
+	                android:id="@+id/rb_device_self_checking_setting"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@drawable/radiobtn_selector"
+	                android:button="@null"
+	                android:gravity="center"
+	                android:padding="12dp"
+	                android:text="@string/device_self_checking_setting"
+	                android:textColor="#ffffff"
+	                android:textSize="15sp" />
+            </RelativeLayout>
+            
+            <View
+                style="@style/line_ver_night"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0" />
+       
+        </RadioGroup>
+
+        <View style="@style/title_bar_line" />
+        
+    </LinearLayout>
+    
+	<android.support.v4.view.ViewPager
+	    android:id="@+id/vPager_setting"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_gravity="center"
+	    android:layout_weight="1.0"
+	    android:flipInterval="30"
+	    android:persistentDrawingCache="animation" />
+	
+</LinearLayout>

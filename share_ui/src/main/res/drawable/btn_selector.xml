@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<selector 
+    xmlns:android="http://schemas.android.com/apk/res/android">   
+	<!-- 未选中--> 
+    <item   android:state_pressed="false" > 
+         <shape > 
+    <solid android:color="@color/box_background" />  
+    </shape>
+    </item> 
+    <!--
+    android:state_active="false" android:state_selected="false" 
+     android:state_active="true" android:state_selected="true"  -->
+	<!--选中-->     
+    <item  android:state_pressed="true"    >  
+        <shape > 
+    <solid android:color="@color/red_deep" />  
+    </shape>
+ </item>
+        <!--选中-->     
+</selector> 

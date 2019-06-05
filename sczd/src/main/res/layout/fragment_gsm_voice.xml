@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_nouse"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <View
+        style="@style/above_button_line"
+        android:layout_above="@+id/btn_stop_voice" />
+
+    <Button
+        android:id="@+id/btn_stop_voice"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:gravity="center"
+        android:onClick="stopMonitor"
+        android:text="停止监听本次通话"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/textsize_19" />
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+<!-- 
+        <hrst.singlepawn.view.MyGifView
+            android:id="@+id/voice_gif"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="10dp" />
+ -->
+ 	<ImageView
+ 	    android:id="@+id/voice_gif"
+ 	    android:layout_width="64dp"
+ 	    android:layout_height="64dp"
+ 	    android:background="@drawable/voices"
+ 	    android:layout_marginBottom="10dp" />
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="正在监听语音......"
+            android:textSize="@dimen/textsize_17" />
+
+        <View style="@style/divider_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_searchtype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_layout_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_10" >
+
+        <TextView
+            android:id="@+id/textviewname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+               android:textSize="17sp"
+            android:text="对端号码：" />
+
+        <TextView
+            android:id="@+id/tv_othercontract_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18694898889" 
+            android:textColor="@color/light_blue"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_call_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+               android:textSize="17sp"
+               android:gravity="right"
+            android:text="呼入"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/light_blue" />
+
+        
+        <!-- 盲搜结果 -->
+    </LinearLayout>
+    <View
+            style="@style/line_gray_night"
+            android:layout_below="@+id/ll_searchtype"/>
+
+</RelativeLayout>

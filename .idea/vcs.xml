@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/ble_lib" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/common_lib" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/sczd" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/share_ui" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/sms_induce" vcs="svn" />
+  </component>
+</project>

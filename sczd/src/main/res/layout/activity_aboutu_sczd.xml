@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+	作用：首页XML
+	作者：沈月美
+	日期：2014-3-11
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+    <!-- 公司logo -->
+
+    <RelativeLayout
+        android:id="@+id/rllayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlelayout"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/logo"
+            android:contentDescription="@string/about_us"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/company_snp_ownership"
+            android:textSize="@dimen/textsize_17" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rllayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+
+                <!-- 系统信息 -->
+
+                <LinearLayout
+                    android:id="@+id/lllayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/secondary_title_bar_height"
+                        android:background="@color/title_bar_background">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/title_bar_spliter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/secondary_title_bar_left"
+                            android:text="@string/system_info"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_15" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bar_spliter" />
+                    </RelativeLayout>
+
+                    <!-- 系统名称 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5">
+
+                        <LinearLayout
+                            android:id="@+id/ll_namelayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/first_height_52.5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:paddingRight="@dimen/margin_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/targetphone_icon"
+                                android:drawablePadding="6dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/system_name"
+                                android:textSize="@dimen/textsize_19" />
+                        </LinearLayout>
+
+                        <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                            android:id="@+id/sys_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/ll_namelayout"
+                            android:ellipsize="marquee"
+                            android:gravity="right"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/single_pawn_sczd"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/textsize_17" />
+                    </RelativeLayout>
+                    <!-- 画横线 -->
+
+                    <View
+                        style="@style/line_gray_night"
+                        android:layout_marginLeft="40dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5">
+
+                        <TextView
+                            android:id="@+id/tv_pda_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:text="@string/pda_version"
+                            android:textSize="@dimen/textsize_17" />
+
+                        <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                            android:id="@+id/version_s"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@id/tv_pda_version"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical|end"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/textsize_17" />
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/line_gray_night"
+                        android:layout_marginLeft="40dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5">
+
+                        <LinearLayout
+                            android:id="@+id/ll_firmware_update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/first_height_52.5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:paddingRight="@dimen/margin_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/firmware_update"
+                                android:drawablePadding="6dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/firmware_update"
+                                android:textSize="@dimen/textsize_19" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_firmware_update"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/btn_selector_sczd"
+                            android:text="@string/query"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_17" />
+                    </RelativeLayout>
+
+
+                    <View
+                        style="@style/line_gray_night"
+                        android:layout_marginLeft="40dp" />
+                    <!-- 检查版本 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_version"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5"
+                        android:background="@drawable/textview_selector"
+                        android:gravity="center_vertical"
+                        android:onClick="checkVersion"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10">
+
+                        <TextView
+                            android:id="@+id/check_version_s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/version_update"
+                            android:drawablePadding="6dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/check_version"
+                            android:textSize="@dimen/textsize_19" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/input_area"
+                            android:contentDescription="@string/about_us"
+                            android:gravity="center_vertical" />
+                        <!-- 版本号 -->
+
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/line_gray_night"
+                        android:layout_marginLeft="40dp" />
+                    <!-- 注册信息 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5"
+                        android:background="@drawable/textview_selector"
+                        android:onClick="regInfo"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="@dimen/margin_10"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/communicationsystem_icon"
+                            android:drawablePadding="6dp"
+                            android:text="@string/reg_info"
+                            android:textSize="@dimen/textsize_19" />
+
+                        <ImageView
+                            android:id="@+id/iv_arror"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/input_area"
+                            android:contentDescription="@string/about_us"
+                            android:gravity="center_vertical" />
+
+                        <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                            android:id="@+id/modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/iv_arror"
+                            android:ellipsize="marquee"
+                            android:gravity="right"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/textsize_17" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/secondary_title_bar_height"
+                        android:background="#03214e">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/title_bar_spliter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/secondary_title_bar_left"
+                            android:text="@string/welcome_msg"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/textsize_15" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bar_spliter" />
+                    </RelativeLayout>
+
+                    <!-- 系统名称 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/first_height_52.5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:paddingRight="@dimen/margin_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/service_tel"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/service_tel"
+                                android:textSize="@dimen/textsize_19" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/margin_10"
+                            android:text="@string/tel_snp"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/textsize_17" />
+                    </RelativeLayout>
+                    <!-- 画横线 -->
+
+                    <View
+                        style="@style/line_gray_night"
+                        android:layout_marginLeft="40dp"
+                        android:visibility="invisible" />
+
+                    <!-- 系统名称 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/first_height_52.5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/first_height_52.5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="@dimen/margin_10"
+                            android:paddingTop="4dp"
+                            android:visibility="invisible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/website"
+                                android:drawablePadding="5dp"
+                                android:text="@string/company_web"
+                                android:textSize="@dimen/textsize_19" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_web"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/margin_10"
+                            android:text="@string/web"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/textsize_17"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+                    <!-- 画横线 -->
+
+                    <View
+                        style="@style/line_gray_night"
+                        android:paddingLeft="50dp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/lllayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/ownership"
+                    android:textSize="13sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

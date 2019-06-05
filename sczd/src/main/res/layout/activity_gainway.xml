@@ -1,0 +1,295 @@
+<!--
+	@author   陈洁
+	@describe 增益方式布局
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- 引用外标题 -->
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_des_aux"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/secondary_title_bar_height"
+        android:layout_below="@id/titlelayout"
+        android:background="@color/serial_number_check"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/textsize_15"
+            android:paddingRight="@dimen/textsize_5"
+            android:text="@string/choose_gain"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+
+        <CheckBox
+            android:id="@+id/cb_aux_level"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_10"
+            android:text="@string/aux_level_mode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_gainway"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_des_aux"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ibGain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:paddingBottom="@dimen/textsize_25"
+            android:paddingLeft="@dimen/textsize_10"
+            android:paddingRight="@dimen/textsize_10"
+            android:paddingTop="@dimen/textsize_25"
+            android:src="@drawable/gain" />
+
+        <!-- 选择增益 -->
+
+        <LinearLayout
+            android:id="@+id/llCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/ibGain"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_gainway"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_gain_high"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/superhigh_gain" />
+
+                <View
+                    style="@style/line_gray_night"
+                    android:layout_below="@+id/ibGain" />
+
+                <RadioButton
+                    android:id="@+id/rb_gain_middle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/high_gain" />
+
+                <View
+                    style="@style/line_gray_night"
+                    android:layout_below="@+id/ibGain" />
+
+                <RadioButton
+                    android:id="@+id/rb_gain_low"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/middle_gain" />
+
+                <View
+                    style="@style/line_gray_night"
+                    android:layout_below="@+id/ibGain" />
+
+                <RadioButton
+                    android:id="@+id/rb_lowgain"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/low_gain" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            style="@style/line_gray_night"
+            android:layout_below="@+id/ibGain"
+            android:layout_marginTop="25dp" />
+
+    </RelativeLayout>
+    <!-- 自动增益 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/auto_gain"
+            android:textSize="@dimen/textsize_19" />
+
+        <CheckBox
+            android:id="@+id/cb_autogain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/checkbox_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_dt_gain_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/secondary_title_bar_height"
+        android:layout_below="@+id/rl_gainway"
+        android:background="@color/serial_number_check"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/textsize_15"
+        android:paddingRight="@dimen/textsize_5"
+        android:text="@string/choose_dt_gain"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_15" />
+
+    <RelativeLayout
+        android:id="@+id/rl_dt_gainway"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dt_gain_title"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ibGain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:paddingBottom="@dimen/textsize_25"
+            android:paddingLeft="@dimen/textsize_10"
+            android:paddingRight="@dimen/textsize_10"
+            android:paddingTop="@dimen/textsize_25"
+            android:src="@drawable/gain" />
+
+        <!-- 选择增益 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dt_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/ibGain1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_dt_gainway"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_dt_high"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/superhigh_gain_dt" />
+
+                <View style="@style/line_gray_night" />
+
+                <RadioButton
+                    android:id="@+id/rb_dt_middle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/high_gain_dt" />
+
+                <View style="@style/line_gray_night" />
+
+                <RadioButton
+                    android:id="@+id/rb_dt_low"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/middle_gain_dt" />
+
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/above_button_line"
+        android:layout_above="@+id/btnSure" />
+
+    <Button
+        android:id="@+id/btnSure"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/button_selector"
+        android:paddingBottom="@dimen/textsize_5"
+        android:paddingTop="@dimen/textsize_5"
+        android:text="@string/gain_sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_19" />
+
+</RelativeLayout>

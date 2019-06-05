@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	@author   岑清锋
+	@describe 搜索方式xml
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 顶部-搜索方式 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentTop="true"
+        android:background="#03214e" >
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_search_unit"
+            android:paddingRight="3dp"
+            android:text="0"
+            android:textColor="#03fc36"
+            android:visibility="invisible"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_search_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="@string/tv_search_unit"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_format"
+        android:layout_width="match_parent"
+        android:layout_height="107.5dp"
+        android:layout_below="@+id/rl_title" >
+
+        <ImageView
+            android:id="@+id/iv_signal_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/about_us"
+            android:padding="10dp"
+            android:src="@drawable/search_basestation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/iv_signal_picture"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/rl_current_format"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_current_format"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_currentformat"
+                    android:textSize="@dimen/textsize_17" />
+
+                <TextView
+                    android:id="@+id/tv_gsm_cmcc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="@string/gsm_cmcc"
+                    android:textColor="#52A4D9"
+                    android:textSize="@dimen/textsize_17" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_divide_format_center"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333" />
+
+            <RadioGroup
+                android:id="@+id/rg_search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_blind"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_blindsearch" />
+
+                <RadioButton
+                    android:id="@+id/rb_fixed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_fixedsearch" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_divide_format_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#333333" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fixed_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search_format"
+        android:paddingTop="2dp"
+        android:visibility="gone"    >
+
+        <RelativeLayout
+            android:id="@+id/rl_fixed_title"
+            android:layout_width="match_parent"
+            android:layout_height="27.5dp"
+            android:background="#03444E" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:text="@string/tv_frequency_param"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_activate_sum"
+                android:text="@string/tv_activated"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_15" />
+
+            <TextView
+                android:id="@+id/tv_activate_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_Activate_Unit"
+                android:paddingRight="3dp"
+                android:text="3"
+                android:textColor="#04FC38"
+                android:textSize="@dimen/textsize_15" />
+
+            <TextView
+                android:id="@+id/tv_Activate_Unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:text="@string/tv_activate_unit"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_fixed_operate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" >
+
+            <View
+                android:id="@+id/line2"
+                style="@style/above_button_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:layout_below="@+id/line2"
+                android:background="@drawable/button_selector"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/tv_clear_all_frequency"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center"
+                    android:height="@dimen/first_height_52.5"
+                    android:onClick="onClearAllClick"
+                    android:text="@string/tv_clear_frequency_point"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_19" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#AEB1B1" />
+
+                <Button
+                    android:id="@+id/tv_fixed_search_start"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/first_height_52.5"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center"
+                    android:height="50dp"
+                    android:onClick="onSearchClick"
+                    android:text="@string/btn_fixedstartsearch"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fixed_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_fixed_operate"
+            android:layout_below="@+id/rl_fixed_title"
+            android:layout_marginTop="6dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_blind_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_blind_result_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#03444e"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_seq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/tv_serial_number"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/tv_frequency_point"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/tv_signal_strength"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textsize_16" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/listview_blind_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/line_gray"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+
+            <!-- 输入频点 -->
+  <!--  <ListView
+        android:id="@+id/lv_wcdma_freq"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray"
+        />  -->
+<GridView
+            android:id="@+id/gv_wcdma_freq"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+            android:focusable="true"
+            android:gravity="center"
+            
+            android:numColumns="3"
+             android:fadingEdge="none" />
+            <ScrollView
+                android:id="@+id/ll_fixed_param"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+                <LinearLayout
+                    
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                   
+                    android:orientation="vertical" >
+
+                    <!-- 第一个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq1"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq1"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency1"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第二个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq2"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq2"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency2"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第三个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14sp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq3"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq3"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency3"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第四个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq4"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq4"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency4"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第五个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq5"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq5"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency5"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第六个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq6"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq6"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency6"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第七个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq7"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq7"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency7"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!-- 第八个频点 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_input8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7.5dp"
+                        android:paddingRight="14dp" >
+
+                        <!-- 序号 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_seq8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/tv_seq8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_seq_unactivate" />
+
+                            <TextView
+                                android:id="@+id/tv_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/rl_seq8"
+                                android:textColor="@color/textcolor_frequency_gray"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+                        <!-- 频点 -->
+
+                        <RelativeLayout
+                            android:id="@+id/rl_frequency8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_seq8"
+                            android:paddingLeft="15dp" >
+
+                            <EditText
+                                android:id="@+id/et_frequency8"
+                                android:layout_width="110.5dp"
+                                android:layout_height="38.5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/search_input_unavailable"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:paddingLeft="4dp"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_clear_frequency8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/search_clear"
+                                android:onClick="onClearFreClick"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_blind_operate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+
+        <View
+            android:id="@+id/line"
+            style="@style/above_button_line" />
+
+        <Button
+            android:id="@+id/tv_blind_search_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:onClick="onSearchClick"
+            android:text="@string/btn_blindstartsearch"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" />
+    </RelativeLayout>
+
+    <Chronometer
+        android:id="@+id/search_chorm"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+</RelativeLayout>

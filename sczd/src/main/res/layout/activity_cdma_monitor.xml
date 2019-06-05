@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+<RelativeLayout
+        android:id="@+id/layout_cdma_format"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titlelayout" >
+
+        <TextView
+            android:id="@+id/tv_cdma_format_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="@string/current_format"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_cdma_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_17" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_cdma_way_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/bg_choosemode" >
+
+        <TextView
+            android:id="@+id/tv_way_cdma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/monitor_mode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_cdma_way"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/iv_cdma_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/none"
+            android:src="@drawable/img_monitor" />
+
+        <RadioGroup
+            android:id="@+id/rg_cdma_monitor_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_cdma_monitor_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/str_monitor_msg"
+                android:textSize="@dimen/textsize_17" />
+
+            <View style="@style/line_gray_night" />
+
+            <RadioButton
+                android:id="@+id/rb_cdma_monitor_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/str_monitor_vol"
+                android:textSize="@dimen/textsize_17" />
+
+            <View
+                style="@style/line_gray_night"
+                android:layout_width="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rb_cdma_monitor_msgandvol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/str_monitor_msgandvol"
+                android:textSize="@dimen/textsize_17" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_cdma_settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_format"
+        android:background="@drawable/bg_choosemode" >
+
+        <TextView
+            android:id="@+id/tv_way_cdma1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/set_param"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_cdma_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:background="@drawable/textview_selector"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_cdma_target_numberphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_17" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_cdma_input_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                android:drawablePadding="85dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:text="@string/str_target_number"
+                android:textSize="@dimen/textsize_19" />
+        </LinearLayout>
+    </RelativeLayout>
+<View
+            style="@style/line_gray_night" />
+    <RelativeLayout
+        android:id="@+id/cdma_layout_targetesn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_selector"
+        android:gravity="center_vertical"
+        android:onClick="targetESN" >
+
+        <com.hrst.common.ui.view.AlwaysMarqueeTextView
+            android:id="@+id/tv_cdma_targetesn_cdma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/ll3"
+            android:ellipsize="marquee"
+            android:gravity="right"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_17" />
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_cdma_target_esn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="49dp"
+                android:drawableRight="@drawable/input"
+                android:gravity="center_vertical"
+                 android:textColor="@color/light_blue"
+                android:text="@string/target_phone_esn"
+                android:textSize="@dimen/textsize_19" />
+        </LinearLayout>
+    </RelativeLayout>
+<View
+            style="@style/line_gray_night" />
+    <RelativeLayout
+        android:id="@+id/layout_cdma_targetimsi"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_selector"
+        android:gravity="center_vertical"
+        android:onClick="targetIMSI" >
+
+        <com.hrst.common.ui.view.AlwaysMarqueeTextView
+            android:id="@+id/tv_targetimsi_cdma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/ll4"
+            android:ellipsize="marquee"
+            android:gravity="right"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_17" />
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_cdma_target_imsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="45dp"
+                android:drawableRight="@drawable/input"
+                android:gravity="center_vertical"
+                 android:textColor="@color/light_blue"
+                android:text="@string/target_phone_imsi"
+                android:textSize="@dimen/textsize_19" />
+        </LinearLayout>
+    </RelativeLayout>
+<View
+            style="@style/line_gray_night" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bottom_button_spliter" />
+
+        <Button
+            android:id="@+id/btn_locate_cdma"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_next_style"
+            android:onClick="cdmaMsgMonitor"
+            android:text="开始监听"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_19" />
+    </LinearLayout>
+   <Chronometer
+        android:id="@+id/cdma_monitor_chorm"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+</LinearLayout>

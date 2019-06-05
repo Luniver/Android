@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+        <TextView
+            android:id="@+id/tv_Tmsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp" />
+        
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem1"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg1"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:layout_weight="1"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel1"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	             android:gravity="center"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+        
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem2"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg2"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel2"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem3"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg3"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel3"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem4"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg4"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel4"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem5"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg5"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel5"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem6"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg6"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel6"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem7"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg7"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel7"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem8"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg8"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel8"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:id="@+id/ll_freqitem9"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+	        <View
+	            android:layout_width="0.7dp"
+	            android:layout_height="fill_parent"
+	            android:background="@drawable/line_gray" />
+	
+	        <TextView
+	            android:id="@+id/tv_msg9"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+	
+	        <TextView
+	            android:id="@+id/tv_tel9"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center_horizontal"
+	            android:paddingBottom="7dp"
+	            android:paddingTop="7dp" />
+		</LinearLayout>
+        <View
+            android:layout_width="0.7dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/line_gray" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/line_gray" />
+
+</LinearLayout>

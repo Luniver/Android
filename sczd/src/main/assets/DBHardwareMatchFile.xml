@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+全部命名都必须大写，例如：
+DSP/MCU/FPGA
+DIG/UMF/DMF/RF
+DIF_0/UMF_1/DMF_2/RF_3
+
+HardwareNode 硬件节点
+id ：唯一标识号，一般用于体现继承关系，必填
+version ：硬件版本号，必填
+name ：硬件类型，必填
+mark ：备注，选填
+extends ：继承硬件节点下的所有支持的软件节点，选填
+
+SortwareNode 软件节点
+action ：ADD是新增节点，DEL删除节点（一般用于硬件节点继承后，不支持某个软件版本作为删除标识），必填
+version ：硬件版本号，必填
+name ：软件类型，必填
+mark ：备注，选填
+
+注意：
+1.继承关系可夸节点继承，UMF可继承DIG；
+2.继承关系会把删除节点关系继承；
+3.不能继承自身节点，如DIG_0继承DIG_0；
+4.不能相互依赖继承，如DIG_0继承UMF_0，UMF_0继承_DIF_0；
+-->
+<Hrst version="2.0">
+  	<!-- DIG -->
+  	<HardwareNode id="DIG_0" version="0" name="DIG" mark="LTEDB_DIG_V1.0" extends="" >
+  		<SortwareNode action="ADD" version="DB_1.1.1_1_1_20161213" name="DSP" mark="" />  	
+  	  	<SortwareNode action="ADD" version="DSP_DB_1.1.1_1_1_20161215" name="DSP" mark="" />
+  	 	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_1.0.0_20170118" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_1.0.1_20170223" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_2.0.0_20170304" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_1.0.0_20170317" name="DSP" mark="" />
+  	  
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.3_20170323" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.3_20170328_NP" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.5_20170412" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.6_20170506" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_2.0.6_20170513" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_2_1_2.1.6_20170613" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_2_2_1_2.1.7_20170725" name="DSP" mark="" />
+  
+  		<SortwareNode action="ADD" version="2.1.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2.2.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2.3.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2" name="FPGA" mark="" />	
+  	</HardwareNode>
+  	<HardwareNode id="DIG_1" version="1" name="DIG" mark="LTEDB_DIG_V1.1" extends="DIG_0" >
+  	    <SortwareNode action="ADD" version="MCU_DB_2R_6_0_2_0_2.5.0_20170912" name="MCU" mark="" />	
+  	    <SortwareNode action="ADD" version="DSP_DB_2R_0_2_2_1_2.1.9_20170911" name="DSP" mark="" />	
+  	    <SortwareNode action="ADD" version="FPGA_DB_2R_6_2_0_0_2.8_20170911" name="FPGA" mark="" />	
+  	    <SortwareNode action="ADD" version="MCU_DB_2R_6_0_2_0_2.6.0_20171218" name="MCU" mark="" />	
+  	    <SortwareNode action="ADD" version="DSP_DB_2R_0_2_3_1_3.2.10_20180105" name="DSP" mark="" />	
+  	    <SortwareNode action="ADD" version="FPGA_DB_2R_6_2_0_0_2.8_20171106" name="FPGA" mark="" />	
+  	</HardwareNode>
+
+  	
+		<!-- RF -->
+    <HardwareNode id="RF_1" version="1" name="RF" mark="LTEDB_RF_V1.1" extends="" >
+  		<SortwareNode action="ADD" version="DB_1.1.1_1_1_20161213" name="DSP" mark="" />  	
+  	 	<SortwareNode action="ADD" version="DSP_DB_1.1.1_1_1_20161215" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_1.0.0_20170118" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_1.0.1_20170223" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_2.0.0_20170304" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_1.0.0_20170317" name="DSP" mark="" />  
+  		<SortwareNode action="ADD" version="2.1.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2.2.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2.3.0" name="MCU" mark="" />
+	</HardwareNode>   
+	 	
+    <HardwareNode id="RF_2" version="2" name="RF" mark="LTEDB_RF_V1.2" extends="RF_1" />
+        
+    <HardwareNode id="RF_3" version="3" name="RF" mark="LTEDB_RF_V1.3" extends="" >
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.3_20170323" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.3_20170328_NP" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.5_20170412" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_1_1_2.0.6_20170506" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_0_1_1_1_2.0.6_20170513" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_1_2_1_2.1.6_20170613" name="DSP" mark="" />
+  	  	<SortwareNode action="ADD" version="DSP_DB_2R_0_2_2_1_2.1.7_20170725" name="DSP" mark="" />  
+  		<SortwareNode action="ADD" version="2.1.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2.2.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2.3.0" name="MCU" mark="" />
+  		<SortwareNode action="ADD" version="2" name="FPGA" mark="" />	
+  	    <SortwareNode action="ADD" version="MCU_DB_2R_6_0_1_0_2.5.0_20170912" name="MCU" mark="" />	
+  	    <SortwareNode action="ADD" version="DSP_DB_2R_0_2_2_1_2.1.9_20170911" name="DSP" mark="" />	
+  	    <SortwareNode action="ADD" version="FPGA_DB_2R_6_2_0_0_2.8_20170911" name="FPGA" mark="" />	
+  	    <SortwareNode action="ADD" version="MCU_DB_2R_6_0_2_0_2.6.0_20171218" name="MCU" mark="" />	
+  	    <SortwareNode action="ADD" version="DSP_DB_2R_0_2_3_1_3.2.10_20180105" name="DSP" mark="" />	
+  	    <SortwareNode action="ADD" version="FPGA_DB_2R_6_2_0_0_2.8_20171106" name="FPGA" mark="" />	
+	</HardwareNode>		
+</Hrst>

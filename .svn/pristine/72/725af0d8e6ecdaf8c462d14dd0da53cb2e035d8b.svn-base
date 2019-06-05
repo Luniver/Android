@@ -1,0 +1,415 @@
+<!--
+	@author   邓丰伟
+	@describe gsm目标定位布局
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <!-- 当前制式 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_format"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titlelayout" >
+
+        <TextView
+            android:id="@+id/tv_format_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="@string/current_format"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_format_gsm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_17" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_getway_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/layout_format"
+        android:background="@drawable/bg_choosemode" >
+
+        <TextView
+            android:id="@+id/tv_getway_gsm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/get_way"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_getway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_getway_title"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/rg_getway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/rb_nomal_get"
+                android:layout_width="wrap_content"
+                android:layout_height="52.5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/nomal_get"
+                android:textSize="@dimen/textsize_17" />
+
+            <RadioButton
+                android:id="@+id/rb_tmsi_get"
+                android:layout_width="wrap_content"
+                android:layout_height="52.5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="8dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="-52.5dp"
+                android:layout_marginLeft="155dp"
+                android:paddingTop="10dp"
+                android:text="@string/tmsi_get"
+                android:textSize="@dimen/textsize_17" />
+              <RadioButton
+                android:id="@+id/rb_tmsi_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="8dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/tmsi_get_active"
+                android:textSize="@dimen/textsize_17" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choose_tmsiget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_getway"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/layout_setvalue_title"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_choosemode" >
+
+            <TextView
+                android:id="@+id/tv_setvalue_gsm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/set_value"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_tmsi_value"
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/tayein_value"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_15" />
+
+      <!--   <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="" /> -->
+
+        <TextView
+            android:id="@+id/tv_gsm_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/gsm_hint_spare"
+            android:textSize="15sp"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choose_nomalget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_getway"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/layout_way_title"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_choosemode" >
+
+            <TextView
+                android:id="@+id/tv_way_gsm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/choose_way"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_way"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/none"
+                android:src="@drawable/flag" />
+
+            <RadioGroup
+                android:id="@+id/rg_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/rb_phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/induced_phone"
+                    android:textSize="@dimen/textsize_17" />
+
+                <View style="@style/line_gray_night" />
+
+                <RadioButton
+                    android:id="@+id/rb_smspayload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/induced_sms_content"
+                    android:textSize="@dimen/textsize_17" />
+
+                <View
+                    style="@style/line_gray_night"
+                    android:layout_width="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/rb_both"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/induced_number_or_sms"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_settings_title"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_choosemode" >
+
+            <TextView
+                android:id="@+id/tv_settings_gsm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/set_param"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+        <!-- 选择方式标题 -->
+
+        <LinearLayout
+            android:id="@+id/layout_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputInducedPhone" >
+
+                <TextView
+                    android:id="@+id/tv_phonenum_gsm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text=""
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_input_phonenum_gsm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="70dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/induced_number"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <RelativeLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:orientation="vertical" 
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_smspayload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="品晶畾瞐"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <TextView
+                    android:id="@+id/tv_smspayload_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sms_content"
+                    android:textSize="@dimen/textsize_17" />
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/btn_locate_gsm"
+        android:background="@color/bottom_button_spliter" />
+
+    <Button
+        android:id="@+id/btn_locate_gsm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_next_style"
+        android:onClick="BeginLocate"
+        android:text="@string/locate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_19" />
+    <!-- android:drawableTop="@drawable/next_border" -->
+
+    <Chronometer
+        android:id="@+id/gsm_chorm"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+</RelativeLayout>

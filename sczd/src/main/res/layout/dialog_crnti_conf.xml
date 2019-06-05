@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+       style="@style/dialog_title"
+       android:text="@string/dialog_crnti_conf" />
+    
+    <LinearLayout 
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:background="@drawable/popup_body"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <RadioGroup 
+                android:id="@+id/rg_select_crnti_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton 
+                    android:id="@+id/rb_unlock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:checked="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" 
+                    android:text="UNLOCK"/>
+                <RadioButton 
+                    android:id="@+id/rb_lock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="LOCK"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_crnti_conf_crnti_cid"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dt_crnti_conf_crnti_cid"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_crnti_conf_crnti_cid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edt_input"
+                android:maxLength="9"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/ll_crnti_conf_crnti_id"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dt_crnti_conf_crnti_id"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_crnti_conf_crnti_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edt_input"
+                android:maxLength="5"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff" />
+        </LinearLayout>        
+          
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        	<Button 
+				android:id="@+id/btn_crnti_mode_conf_cancel"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/fillet_select_bg"
+				android:textColor="#fff"
+				android:textSize="22sp"
+				android:text="@string/cancel"/>
+       		<Button 
+				android:id="@+id/btn_crnti_mode_conf_ok"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="10dp"
+				android:background="@drawable/fillet_select_bg"
+				android:textColor="#fff"
+				android:textSize="22sp"
+				android:text="@string/ok"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

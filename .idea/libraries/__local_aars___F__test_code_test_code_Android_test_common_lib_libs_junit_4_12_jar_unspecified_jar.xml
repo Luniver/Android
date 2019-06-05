@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="__local_aars__:F.\test_code\test_code\Android_test\common_lib\libs\junit-4.12.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/common_lib/libs/junit-4.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

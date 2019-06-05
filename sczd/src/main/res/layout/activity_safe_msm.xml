@@ -1,0 +1,171 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- ll_top_msm_nul和  ll_bottom_null只是为了布局需要，确定viewPager在窗口中的位置 -->
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_null"
+        android:layout_width="match_parent"
+        android:layout_height="52.5dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_top_msm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <View style="@style/button_line" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="52.5dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_induce"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/app_induce"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#01FFFF" />
+
+            <RadioButton
+                android:id="@+id/rb_detection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@null"
+                android:drawableLeft="@drawable/hint_light"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="@string/start_up"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+        </RadioGroup>
+
+        <View style="@style/button_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_bottom_null"
+        android:layout_below="@id/ll_top_msm"
+        android:gravity="center" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" >
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_incude"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btn_endinduce"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:onClick="ClickItem"
+                android:text="@string/stop_induce"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_startinduce"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:onClick="ClickItem"
+                android:text="@string/start_induce"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_enddetection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:onClick="ClickItem"
+                android:text="@string/enddetection"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_detection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:onClick="ClickItem"
+                android:text="@string/detection"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

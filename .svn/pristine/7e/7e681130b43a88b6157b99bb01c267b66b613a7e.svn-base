@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_title"
+        android:textSize="@dimen/textsize_27"
+        android:textColor="@color/login_title_color" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_small_title"
+        android:textSize="@dimen/textsize_21"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="80dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+        <EditText 
+            android:id="@+id/user_sign"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="25sp"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edt_input"
+            android:textColorHint="@color/login_font_tips_color"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:hint="@string/login_userSign"/>
+        <EditText 
+            android:id="@+id/user_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/edt_input"
+            android:textColorHint="@color/login_font_tips_color"
+            android:textSize="25sp"
+            android:password="true"
+            android:singleLine="true"
+            android:paddingLeft="5dp"
+            android:hint="@string/login_userPwd"/> 
+            
+        <Button 
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:background="@drawable/btn_next_style"
+            android:text="@string/btn_login"/>
+    </LinearLayout>
+
+</LinearLayout>

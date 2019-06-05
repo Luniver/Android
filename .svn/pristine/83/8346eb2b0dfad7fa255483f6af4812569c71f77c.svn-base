@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content"  
+    android:padding="10dp"  
+    android:gravity="center"  
+    android:background="@drawable/toaststyle"
+    android:orientation="horizontal" >
+    
+    <ImageView 
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/u_disk_icon"/>
+    
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/white"/>
+    
+    <TextView 
+        android:id="@+id/txt_toast_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:textSize="@dimen/textsize_15"
+        android:text="@string/u_disk_insertion"/>
+
+</LinearLayout>

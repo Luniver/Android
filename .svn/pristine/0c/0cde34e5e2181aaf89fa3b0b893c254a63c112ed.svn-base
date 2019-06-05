@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    tools:context="hrst.sczd.ui.activity.SensibilityActivity">
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RadioGroup
+        android:id="@+id/rg_switch_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlelayout"
+        android:background="@color/bg_dialog_color"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_statistic_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/rg_bg"
+            android:text="@string/close"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_17" />
+
+        <RadioButton
+            android:id="@+id/rb_statistic_open"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/rg_bg"
+            android:text="@string/open_test"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_17" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@id/rg_switch_group"
+        android:layout_marginTop="3dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_group_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_dialog_color"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tab_sys"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_marginStart="@dimen/margin_10"
+                android:gravity="center"
+                android:text="@string/tab_sys"
+                android:textColor="@color/font_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_sys"
+                android:layout_width="@dimen/first_height_52.5"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignTop="@id/tab_sys"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tab_sys"
+                android:gravity="center_vertical"
+                android:text="LTE"
+                android:textColor="@color/font_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tab_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignTop="@id/tv_sys"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tv_sys"
+                android:gravity="center"
+                android:text="@string/tab_frequency"
+                android:textColor="@color/font_color"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_freq"
+                android:layout_width="@dimen/first_height_52.5"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignTop="@id/tab_frequency"
+                android:layout_toEndOf="@id/tab_frequency"
+                android:background="@drawable/edt_input"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_tab_hz"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignTop="@id/et_freq"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@id/et_freq"
+                android:gravity="center"
+                android:text="MHz" />
+
+            <TextView
+                android:id="@+id/tab_times"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignTop="@id/tv_sys"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tv_tab_hz"
+                android:gravity="center"
+                android:text="@string/times"
+                android:textColor="@color/font_color"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_times"
+                android:layout_width="@dimen/first_height_52.5"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignTop="@id/tab_frequency"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_toEndOf="@id/tab_times"
+                android:background="@drawable/edt_input"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_group_peak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_group_params"
+            android:layout_marginTop="3dp"
+            android:background="@color/bg_dialog_color">
+
+            <TextView
+                android:id="@+id/tv_fjbmx"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:gravity="center"
+                android:text="@string/fjb_test"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_threshold_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tv_fjbmx"
+                android:gravity="center"
+                android:text="@string/threshold_statistic_tip"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_fjbmx_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_fjbmx"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10">
+
+                <RadioButton
+                    android:id="@+id/rb_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/second_height_40"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/auto_test"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+
+                <RadioButton
+                    android:id="@+id/rb_cus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/second_height_40"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/cus_test"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_group_peak_cus"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignBottom="@id/rg_fjbmx_group"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/rg_fjbmx_group"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_cus_fjb"
+                    android:layout_width="@dimen/first_height_52.5"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/edt_input"
+                    android:digits="0123456789."
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="dB" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_fjb_start"
+                android:layout_width="@dimen/btn_width_100"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/rg_fjbmx_group"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_30"
+                android:background="@drawable/btn_selector_sczd"
+                android:text="@string/start_statistic"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_group_sensible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_group_peak"
+            android:layout_marginTop="3dp"
+            android:background="@color/bg_dialog_color"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_sensible_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_marginStart="@dimen/margin_10"
+                android:gravity="center"
+                android:text="@string/sensibility_percent"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_sensible_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@id/tv_sensible_tab"
+                android:gravity="center"
+                android:text="@string/sensibility_tip"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_sensible_start"
+                android:layout_width="@dimen/btn_width_100"
+                android:layout_height="@dimen/second_height_40"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_10"
+                android:background="@drawable/btn_selector_sczd"
+                android:enabled="false"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:text="@string/start_check"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_title_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/second_height_40"
+            android:layout_below="@id/rl_group_sensible"
+            android:layout_marginTop="3dp"
+            android:background="@color/bg_dialog_color">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/title_time"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/title_freq"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/title_fjbmx"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sensibility_percent"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_sensibility"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_title_list"
+            android:listSelector="@android:drawable/screen_background_dark_transparent" />
+    </RelativeLayout>
+</RelativeLayout>

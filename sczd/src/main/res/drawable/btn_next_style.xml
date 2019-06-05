@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 未选中--> 
+    <item     
+         android:state_pressed="false"   
+         android:drawable="@color/box_background" />  
+	<!--选中-->     
+    <item     
+        android:state_pressed="true"     
+        android:drawable="@color/bottom_button_check_background" />     
+</selector>

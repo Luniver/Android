@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	@author   沈月美
+	@describe 用户注册
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_title_background"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="@string/regcode_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_22" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/input_interface_background"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" >
+
+                <!-- 号码制式标题 -->
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="bottom"
+                    android:text="@string/number_format"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+                <!-- 制式选择 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/input_interface_background"
+                    android:orientation="horizontal" >
+
+                    <!-- GSM/WCDMA -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/input_interface_background"
+                        android:orientation="vertical" >
+
+                        <CheckBox
+                            android:id="@+id/cb_reg_gsm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/reg_check_selector"
+                            android:drawablePadding="3dp"
+                            android:text="@string/gsm"
+                            android:textScaleX="1"
+                            android:textSize="@dimen/textsize_15" />
+
+                        <CheckBox
+                            android:id="@+id/cb_reg_wcdma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/reg_check_selector"
+                            android:drawablePadding="3dp"
+                            android:text="@string/wcdma"
+                            android:textScaleX="1"
+                            android:textSize="@dimen/textsize_15" />
+                    </LinearLayout>
+                    <!-- CDMA/TD_SCDMA -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/input_interface_background"
+                        android:orientation="vertical" >
+
+                        <CheckBox
+                            android:id="@+id/cb_reg_cdma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/reg_check_selector"
+                            android:drawablePadding="3dp"
+                            android:text="@string/cdma"
+                            android:textScaleX="1"
+                            android:textSize="@dimen/textsize_15" />
+
+                        <CheckBox
+                            android:id="@+id/cb_reg_tdscdma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/reg_check_selector"
+                            android:drawablePadding="3dp"
+                            android:text="@string/tdscdma"
+                            android:textScaleX="1"
+                            android:textSize="@dimen/textsize_15" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 客户单位 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/input_interface_background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp" >
+
+                <TextView
+                    android:id="@+id/tv_customer_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="@string/customer_unit"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <EditText
+                    android:id="@+id/et_customer_unit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dip"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:maxLength="20"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_15" />
+            </LinearLayout>
+
+            <!-- 联系人 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/input_interface_background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp" >
+
+                <TextView
+                    android:id="@+id/tv_contacter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="@string/contacter"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <EditText
+                    android:id="@+id/et_contacter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dip"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_15" />
+            </LinearLayout>
+
+            <!-- 联系电话 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/input_interface_background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp" >
+
+                <TextView
+                    android:id="@+id/tv_contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="@string/contact_number"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <EditText
+                    android:id="@+id/et_contact_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dip"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_15" />
+            </LinearLayout>
+
+            <!-- 备注 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/input_interface_background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp" >
+
+                <TextView
+                    android:id="@+id/tv_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/note"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_17" />
+
+                <EditText
+                    android:id="@+id/et_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="36dip"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9c9a9c"
+                android:orientation="horizontal"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/btn_reg_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textColor="@color/btn_enable"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="@string/register"
+                    android:textColor="@color/btn_enable"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

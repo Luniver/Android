@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        aa {
+            keyAlias 'aa'
+            keyPassword '123456'
+            storeFile file('../aa_keystore')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "hrst.singlepawn.mainprogram.sc"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.sczdVersionName
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.aa
+        }
+        debug {
+            signingConfig signingConfigs.aa
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${rootProject.sczdVersionName}.apk"
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':ble_lib')
+    implementation project(":common_lib")
+    implementation project(":share_ui")
+    implementation project(":sms_induce")
+}

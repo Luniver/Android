@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- <string name="app_name">四种通信制式\n目标导向系统</string> -->
+    <string name="app_name">数传终端</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- 注册 -->
+    <string name="regcode_title">用户注册</string>
+    <string name="note">备注</string>
+    <string name="customer_unit">客户单位</string>
+    <string name="contacter">联系人</string>
+    <string name="contact_number">联系电话</string>
+    <string name="register">注册</string>
+    <string name="gsm">GSM</string>
+    <string name="network_title">网络异常</string>
+    <string name="open_network">请开启网络！</string>
+    <string name="set">设置</string>
+    <string name="exit">退出</string>
+
+    <!-- 首页 -->
+    <string name="target_phone">目标号码</string>
+    <string name="input_phonenumber">点击输入号码</string>
+    <string name="note_name">备注姓名</string>
+    <string name="number_format">选择制式</string>
+    <string name="auto_selection">自动选择</string>
+    <string name="gsm_cmcc">GSM-CMCC</string>
+    <string name="gsm_all">GSM-ALL</string>
+    <string name="tdscdma">TD-SCDMA</string>
+    <string name="gsm_cucc">GSM-CUCC</string>
+    <string name="wcdma">WCDMA</string>
+    <string name="lte">LTE</string>
+    <string name="cdma">CDMA</string>
+    <string name="sms_to_induce">短信诱发</string>
+    <string name="call_to_induce">拨打诱发</string>
+    <string name="next">下一步</string>
+    <string name="else_phone_format">目前该号码段还没有相应的制式，请联系客服！</string>
+    <string name="sms_type_two">格式二</string>
+
+    <!-- 号码管理 -->
+    <string name="numbermanagement">号码管理</string>
+    <string name="numberwhole">全部</string>
+    <string name="record">记录1</string>
+    <string name="addgroup">新建分组</string>
+    <string name="updatenumber">修改号码</string>
+    <string name="usedlogs">使用记录</string>
+    <string name="movegroup">移至分组</string>
+    <string name="delnumber">删除号码</string>
+    <string name="groupname">分组名称</string>
+    <string name="selectgroup">选择分组</string>
+    <string name="export">导出</string>
+    <string name="home">首页</string>
+    <string name="new_input_number">新增目标号码</string>
+    <!-- 输入框 -->
+    <string name="cancel">取消</string>
+    <string name="history">历史记录</string>
+
+    <string name="input_number">输入号码</string>
+    <string name="canceldown">取消下载</string>
+    <!-- 蓝牙配对 -->
+    <string name="reconnection">蓝牙已失去连接，点击此区域进行重连</string>
+    <string name="device_list">设备列表</string>
+    <string name="soft_update_updatebtn">确认更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="hasnohint">附近没有开启的蓝牙设备\n刷新列表重新搜索</string>
+
+    <!-- 场强分析 -->
+    <!-- 小区信息 -->
+    <string name="community_information">小区信息</string>
+    <string name="community_searchresult">小区信息</string>
+    <string name="community_state">状态</string>
+    <string name="community_count">计数</string>
+    <string name="community_snr">SNR</string>
+    <string name="community_freqhz">频偏</string>
+
+    <!-- 设备信息 -->
+    <string name="equipment_information">设备信息</string>
+    <string name="basic_info">基本信息</string>
+    <string name="target_name">姓名</string>
+    <string name="communication_format">通信制式</string>
+    <string name="device_temp">设备温度</string>
+    <string name="device_electricity">设备电量</string>
+    <string name="dsp">DSP</string>
+    <string name="fpga">FPGA</string>
+    <string name="mcu">MCU</string>
+
+    <!-- 搜索方式 -->
+    <string name="tv_search_type">搜索方式</string>
+    <string name="tv_search_unit">次</string>
+    <string name="tv_currentformat">当前制式</string>
+    <string name="tv_blindsearch">盲搜</string>
+    <string name="tv_fixedsearch">定频</string>
+    <string name="tv_frequency_param">频点参数</string>
+    <string name="tv_activated">已激活：</string>
+    <string name="tv_activate_unit">个</string>
+    <string name="tv_serial_number">No</string>
+    <string name="tv_frequency_point">频点</string>
+    <string name="tv_signal_strength">能量</string>
+    <string name="tv_clear_frequency_point">清除频点</string>
+    <string name="rl_seq1">1</string>
+    <string name="rl_seq2">2</string>
+    <string name="rl_seq3">3</string>
+    <string name="rl_seq4">4</string>
+    <string name="rl_seq5">5</string>
+    <string name="rl_seq6">6</string>
+    <string name="rl_seq7">7</string>
+    <string name="rl_seq8">8</string>
+    <string name="btn_fixedstartsearch">开始搜索</string>
+    <string name="btn_blindstartsearch">开始搜索</string>
+
+    <!-- 目标信息 -->
+    <string name="target_information">目标信息</string>
+    <string name="clear_history">清空历史记录</string>
+    <string name="lac">LAC</string>
+    <string name="cid">CID</string>
+    <string name="energy_column">能量</string>
+    <string name="target_distance">距离</string>
+    <string name="energy_info">能量信息</string>
+    <string name="hit">命中</string>
+    <string name="count">次</string>
+    <string name="capture_info">捕获信息</string>
+    <string name="dt_RxLeverInDbm">DT:</string>
+    <string name="tv_msg">短信</string>
+    <string name="targetindex">目标</string>
+    <string name="tv_tel">拨打</string>
+    <string name="targetnumber">目标号</string>
+    <string name="targettmsi">TMSI</string>
+    <string name="cellnumber">小区号</string>
+    <string name="fontMode">当前模式</string>
+    <string name="midk">窗口信息</string>
+    <string name="syncpointtotal">窗口峰值</string>
+    <string name="cdma_imsi">IMSI</string>
+    <string name="cdma_esn">ESN</string>
+    <string name="syncpointinwindow">全域峰值</string>
+    <string name="successflag">成功指示</string>
+    <string name="tmsivalue">目标TMSI</string>
+    <string name="tmsifreq">TMSI频点</string>
+    <string name="tmsitime">次数</string>
+    <string name="continuous_capture_state">连续捕获状态 0</string>
+    <string name="lte_ref">REF:</string>
+
+    <!-- 关于我们 -->
+    <string name="about_us">关于我们</string>
+    <string name="msg_record">msg</string>
+    <string name="system_info">系统信息</string>
+    <string name="system_name">系统名称</string>
+    <string name="single_pawn">单兵LTE手机测向系统</string>
+    <string name="single_pawn_sczd">数传终端系统</string>
+    <string name="check_version">检查固件版本</string>
+    <string name="firmware_update">固件升级</string>
+    <string name="query">查询</string>
+    <string name="update">升级</string>
+    <string name="cur_version">当前版本</string>
+    <string name="welcome_msg">欢迎信息</string>
+    <string name="service_tel">客服电话</string>
+    <string name="tel">020-84762913</string>
+    <string name="tel_snp">020-84762913</string>
+    <string name="company_web">公司网站</string>
+    <string name="close_device">关闭设备</string>
+    <string name="diaoce">调测界面</string>
+    <string name="rsa">RSA界面</string>
+    <string name="dt_mode_conf">数传配置</string>
+    <string name="debug_activity">调试工具集</string>
+    <string name="oam">OAM界面</string>
+    <string name="debug_data_acquisition">调试数据获取</string>
+    <string name="lteActivateCAC">载波聚合开关</string>
+    <string name="sms_test">短信功能测试</string>
+    <string name="reg_info">注册信息</string>
+    <string name="modify">修改f</string>
+    <string name="web">hrst-china.com</string>
+    <string name="company_ownership">广州慧睿思通信息科技有限公司版权所有</string>
+    <string name="company_snp_ownership">广州慧睿思通信息科技有限公司</string>
+
+    <string name="ownership">Copyright@2013 HRST Corp.All Right Reserved.</string>
+    <string name="open_new_frament">开通新制式</string>
+    <string name="update_registcode">更新号码制式</string>
+
+    <!-- 检查版本 -->
+    <string name="check_new_version">检查到新版本</string>
+    <string name="new_version_info">新版本信息</string>
+    <string name="check">检查</string>
+    <string name="check_hint">提示</string>
+    <string name="check_hint_content">不能进行版本更新检查</string>
+    <string name="chek_hint_bluetooth_content">是否继续检查版本？</string>
+    <string name="check_version_btoothdisconn">蓝牙未连接，是否连接蓝牙？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="close">关闭</string>
+
+    <!-- 增益方式 -->
+    <string name="low_gain">调试增益(-30≤P≤0)dbm</string>
+    <string name="middle_gain">低增益(-50≤P≤-30)dbm</string>
+    <string name="high_gain">中增益(-70≤P≤-50)dbm</string>
+    <string name="superhigh_gain">高增益(-95≤P≤-70)dbm</string>
+    <string name="low_gain_dt">调试增益(-19≤P≤-12)dbm</string>
+    <string name="middle_gain_dt">低增益</string>
+    <string name="high_gain_dt">中增益</string>
+    <string name="superhigh_gain_dt">高增益</string>
+    <string name="choose_gain">选择目标增益</string>
+    <string name="choose_dt_gain">选择数传增益</string>
+    <string name="gain_title">目标|数传 增益</string>
+    <string name="auto_gain">自动增益</string>
+    <string name="gain_sure">确认</string>
+
+    <!-- 目标定位 -->
+    <string name="locate">开始搜索</string>
+    <string name="target">目标定位</string>
+    <string name="target_jk">目标监听</string>
+    <string name="none"></string>
+    <string name="current_format">当前制式</string>
+    <string name="choose_way">选择方式</string>
+    <string name="monitor_mode">监听模式</string>
+    <string name="get_way">捕获方案</string>
+    <string name="set_value">设置多次诱捕门限值</string>
+    <string name="tmsi_value">TMSI门限值</string>
+    <string name="tayein_value">请输入多次诱捕门限值</string>
+    <string name="set_param">设置参数</string>
+    <string name="choose_target_way">选择目标定位方式</string>
+    <string name="sms_content">短信内容</string>
+    <string name="donot_show">不显示</string>
+    <string name="induced_number">诱发号码</string>
+    <string name="rsvd_number">MNC值</string>
+    <string name="induced_phone">诱发手机号码</string>
+
+    <string name="str_monitor_msg">短信</string>
+    <string name="str_monitor_vol">语音</string>
+    <string name="str_monitor_msgandvol">短信和语音</string>
+    <string name="str_target_number">目标号码</string>
+    <string name="str_target_imsi">目标IMSI</string>
+    <string name="str_target_tmsi">目标TMSI</string>
+
+    <string name="induced_sms_content">诱发短信内容</string>
+    <string name="induced_number_or_sms">诱发手机号码或短信内容</string>
+    <string name="nomal_get">常规捕获方案</string>
+    <string name="tmsi_get">多次诱捕方案</string>
+    <string name="tmsi_get_active">主叫捕获方案</string>
+    <string name="induced_phone_esn">诱发手机ESN</string>
+    <string name="cdma_target_way1">通过IMSI/ESN定位目标</string>
+    <string name="cdma_target_way2">通过诱发机号码定位目标</string>
+    <string name="induced_phone_imsi">诱发手机IMSI</string>
+    <string name="target_phone_esn">目标手机ESN</string>
+    <string name="target_phone_imsi">目标手机IMSI</string>
+    <string name="ok">确定</string>
+    <string name="input_induced_phone">输入诱发号码</string>
+    <string name="input_imsi">输入IMSI</string>
+    <string name="input_esn">输入ESN</string>
+    <string name="gsm_hint_spare">注意：诱发间隔需大于5秒！</string>
+
+    <!-- 系统设置 -->
+    <string name="system_settings_title">系统设置</string>
+    <string name="voice_count_off">目标能量值报数提醒</string>
+    <string name="speech_settings">语音设置</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="day_mode">白天模式</string>
+    <string name="visual_patterns">视觉模式</string>
+    <string name="leave_target">离开目标LAC时提醒</string>
+    <string name="near_target">即将接近目标时语音提醒</string>
+    <string name="temp_high">设备温度过高时提醒（默认60℃）</string>
+    <string name="host_deficiency">主机电量不足时提醒（默认20%）</string>
+    <string name="reset_default">恢复默认设置</string>
+    <string name="temp_input">输入温度值</string>
+    <string name="temp_default">默认温度值</string>
+    <string name="host_input">输入电量值</string>
+    <string name="host_default">默认电量值</string>
+    <string name="title_alert">提示信息</string>
+    <string name="device_self_checking">设备功能检测</string>
+    <string name="voice_prompt_setting">语音提示设置</string>
+    <string name="device_self_checking_setting">设备自检设置</string>
+
+    <!-- wcdma短信阈值 -->
+    <string name="wcdmasmsthreshold">wcdma短信阈值</string>
+    <string name="msglimitvalue">短信阈值</string>
+    <string name="smsthreshold">短信门限值：</string>
+    <string name="phonethreshold">电话门限值：</string>
+    <string name="groupsmsthreshold">组合模式短信门限：</string>
+    <string name="groupphonethreshold">组合模式电话门限：</string>
+
+    <!--Gsm目标监控内容 -->
+    <string name="gsm_target_id">目标编号</string>
+    <string name="gsm_monitor_target_num">监控目标号码</string>
+    <string name="gsm_get_send_msg">收发短信</string>
+    <string name="gsm_get_msg">收短信</string>
+    <string name="gsm_send_msg">发短信</string>
+    <string name="gsm_meger_msg">拼接短信</string>
+    <string name="gsm_other_num">对端号码</string>
+    <string name="gsm_meger_one">拼接条数</string>
+    <string name="gsm_one_id">本条序号</string>
+    <string name="gsm_unicode_style">编码格式</string>
+    <string name="gsm_symbol_value">参考值</string>
+    <string name="gsm_msg_length">短信长度</string>
+    <string name="gsm_msg_content">短信内容</string>
+
+    <!--Dsp调测界面 -->
+    <string name="debug_list_gain">获取</string>
+    <string name="gain">一键获取</string>
+    <string name="cancel_gain">取消获取</string>
+    <string name="condition_gain">条件获取</string>
+    <string name="debug_id">ID号：</string>
+    <string name="debug_name">名称：</string>
+    <string name="debug_info_id">DebugInfo ID:</string>
+    <string name="debug_length">长度：</string>
+    <string name="build_address">地址：</string>
+    <string name="dialog_show_msg">Show Msg</string>
+    <string name="dialog_dt_mode_conf">数传配置</string>
+    <string name="dialog_lte_activate_cac">载波聚合开关</string>
+    <string name="dialog_crnti_conf">CRNTI配置</string>
+    <string name="dialog_dec_conf">检测时间配置</string>
+    <string name="dialog_accuratefinding_config">精准捕获检测配置</string>
+    <string name="dt_mode">数传模式:</string>
+    <string name="dt_mode_self">自主数传</string>
+    <string name="tran_mode">收发模式:</string>
+    <string name="dt_mode_conf_freq">数传频率:</string>
+    <string name="dt_crnti_conf_crnti_cid">CellId:</string>
+    <string name="dt_crnti_conf_crnti_id">CRNTI:</string>
+
+    <!-- LTE小区搜索界面 -->
+    <string name="tv_cell_search_lte">小区搜索</string>
+    <string name="rb_mobile">移动</string>
+    <string name="rb_unicom">联通</string>
+    <string name="rb_telecom">电信</string>
+    <string name="tv_locate_information">定位信息</string>
+    <string name="rb_conventional_capture">常规捕获</string>
+    <string name="rb_precision_capture">精准捕获</string>
+    <string name="rb_new_capture">新捕获</string>
+    <string name="tv_target_mmec">目标MMEC</string>
+    <string name="tv_target_tmsi">目标TMSI</string>
+    <string name="tv_induced_number">诱发机号码</string>
+    <string name="tv_message_threshold">短信门限</string>
+    <string name="rb_intelligent_sweep_frequency">智能</string>
+    <string name="rb_fixed_ferquency_selection">定频</string>
+    <string name="rb_fixed_ferquency_selection_2">定频2</string>
+    <string name="rb_full_frequency_scanning">全频</string>
+    <string name="edt_freq_1">频点1</string>
+    <string name="edt_freq_2">频点2</string>
+    <string name="edt_freq_3">频点3</string>
+    <string name="edt_freq_4">频点4</string>
+    <string name="edt_freq_5">频点5</string>
+    <string name="edt_freq_6">频点6</string>
+    <string name="edt_freq_7">频点7</string>
+    <string name="edt_freq_8">频点8</string>
+    <string name="tv_positioning_start_mode">定位启动方式</string>
+    <string name="rb_timer_start">定时启动</string>
+    <string name="rb_matching_start">匹配启动</string>
+    <string name="rb_manual_start">手动启动</string>
+    <string name="edt_tacAndCid_1">LAC/CID 1</string>
+    <string name="edt_tacAndCid_2">LAC/CID 2</string>
+    <string name="edt_tacAndCid_3">LAC/CID 3</string>
+
+    <string name="edt_tac_1">LAC1</string>
+    <string name="edt_tac_2">LAC2</string>
+    <string name="edt_tac_3">LAC3</string>
+
+    <string name="edt_Cid_1">CID1</string>
+    <string name="edt_Cid_2">CID2</string>
+    <string name="edt_Cid_3">CID3</string>
+
+    <string name="edt_out_time">超时时间</string>
+    <string name="input_target_number">输入目标号码</string>
+    <string name="input_target_imsi">输入目标IMSI</string>
+    <string name="input_target_mmec">输入目标MMEC</string>
+    <string name="input_target_tmsi">输入目标TMSI</string>
+    <string name="input_induced_number">输入诱发号码</string>
+    <string name="input_rsvd_value">输入MNC值</string>
+    <string name="input_message_threshold">输入短信门限</string>
+    <string name="input_phone_threshold">输入电话门限</string>
+    <string name="target_number">目标号码</string>
+    <string name="target_imsi">目标IMSI</string>
+    <string name="target_mmec">目标MMEC</string>
+    <string name="target_tmsi">目标TMSI(16进制)</string>
+    <string name="target_tmsi_W">目标TMSI(16进制)</string>
+    <string name="message_threshold">短信门限</string>
+    <string name="phone_threshold">电话门限</string>
+    <string name="btn_state_query">状态查询</string>
+    <string name="btn_issued_config">下发配置</string>
+
+    <!-- GSM -->
+    <string name="gsm_cell_seach_title">GSM小区搜索</string>
+    <string name="tv_gsm_cell_seach_operator">运营商</string>
+    <string name="rb_gsm_cell_seach_mobile_operator">GSM移动</string>
+    <string name="rb_gsm_cell_seach_unicom_operator">GSM联通</string>
+    <string name="rb_gsm_cell_seach_all_operator">GSM ALL</string>
+    <string name="tv_gsm_captrue_mode">捕获方式</string>
+    <string name="rb_gsm_captrue_mode_rule">常规</string>
+    <string name="rb_gsm_captrue_mode_multiple_capture">多次</string>
+    <string name="rb_gsm_captrue_mode_calling_capture">主叫</string>
+    <string name="tv_gsm_monitoring_mode">监听方式</string>
+    <string name="tv_gsm_induced_mode">确认方式</string>
+    <string name="rb_gsm_monitoring_mode_sms">短信</string>
+    <string name="rb_gsm_monitoring_mode_voice">语音</string>
+    <string name="rb_gsm_monitoring_mode_sms_voice">短信和语音</string>
+    <string name="rb_gsm_induced_mode_induced_number">号码</string>
+    <string name="rb_gsm_induced_mode_induced_sms_content">短信</string>
+    <string name="rb_gsm_induced_mode_induced_number_sms_content">号码或短信</string>
+    <string name="tv_gsm_search_mode">搜索方式</string>
+    <string name="rb_gsm_search_mode_full_frequency">盲搜</string>
+    <string name="rb_gsm_search_mode_fixed_frequency">定频</string>
+    <string name="tv_target_num">目标机号码</string>
+    <string name="tv_induced_num">诱发号码</string>
+    <string name="tv_target_imsi">目标机IMSI\t\t</string>
+    <string name="tv_threshold_value">门限值\t\t\t\t\t</string>
+    <string name="tv_rsvd_value">Rsvd值\t\t\t\t\t</string>
+    <string name="input_threshold_value">输入门限值</string>
+    <string name="threshold_value">门限值</string>
+
+    <!-- CDMA制式 -->
+    <string name="rb_cdma_capture_esn_and_imsi">ESN/IMSI定位</string>
+    <string name="rb_cdma_capture_induced_location">诱发机号码定位</string>
+
+    <!-- 诱发模块 -->
+    <string name="msm_induce">短信诱发</string>
+    <string name="call_induce">拨打诱发</string>
+    <string name="setting_induce">诱发设置</string>
+    <string name="result_induce">诱发结果</string>
+    <string name="dial_count">拨打次数</string>
+    <string name="dial_time">拨打时长(毫秒)</string>
+    <string name="spance_time">间隔时长(毫秒)</string>
+    <string name="detecte_state_send_sms">拨打</string>
+    <string name="send_notecontent">短信内容</string>
+    <string name="send_type">诱发格式</string>
+    <string name="send_cdma_alleyway">CDMA短信通道</string>
+    <string name="do_time">次数</string>
+    <string name="out_time">超时</string>
+    <string name="wait_times">等待</string>
+    <string name="do_interval">间隔</string>
+    <string name="hangup">挂断</string>
+    <string name="time_number">次</string>
+    <string name="time_ms">ms</string>
+
+    <string name="check_tip">请选择诱发方式</string>
+    <string name="setting_tip">设置不能为空</string>
+    <string name="detect_interval">请稍候...</string>
+    <string name="detect_interval1">请稍等1秒</string>
+    <string name="notify_cant_target">通知号码不能为目标号码!</string>
+    <string name="interval_tip">间隔为1000~99999ms</string>
+    <string name="hangup_tip">挂断拨打为1000~99999ms</string>
+    <string name="note_time_number_tip">短信诱发次数为1～99次</string>
+    <string name="call_time_number_tip">拨打诱发次数为1~99次</string>
+    <string name="negative_tip">设置中不能有负数</string>
+    <string name="detection_time_tip">检测超时时间为20000~99999ms</string>
+    <string name="detection_out_tip">等待时间为20000～999999ms</string>
+    <string name="outtime_tip">短信超时为1000~99999ms</string>
+    <string name="waittime_tip">回执等待为1000~99999ms</string>
+
+    <string name="result_detection">检测结果</string>
+    <string name="target_start">目标开机</string>
+    <string name="target_up">目标关机</string>
+    <string name="target_unstart">未启动</string>
+    <string name="target_detection_ing">检测中...</string>
+    <string name="detection">开始检测</string>
+    <string name="enddetection">停止检测</string>
+    <string name="setting_detection">检测设置</string>
+    <string name="wait_time">等待时间</string>
+    <string name="notification_phone">通知号码</string>
+    <string name="hint_target_phone">输入目标号码</string>
+
+    <string name="start_induce">开始诱发</string>
+    <string name="stop_induce">结束诱发</string>
+
+    <!-- DialogActivity -->
+    <string name="check_sim">制式选择</string>
+    <string name="check_com">通道选择</string>
+    <string name="check_content">短信内容选择</string>
+    <string name="select_sms_type">短信格式选择</string>
+
+    <!-- safeSelectEntryActivityvity -->
+    <string name="sim_tip">号码制式不能为空</string>
+    <string name="send_target_phone">目标手机号码：</string>
+    <string name="send_target_phone_freq">目标手机号码制式：</string>
+    <string name="send_dev">发送的串口:</string>
+    <string name="send_detection">开关机检测</string>
+
+    <!-- safesms ThreeMainActivity -->
+    <string name="app_induce">诱发程序</string>
+    <string name="start_up">开关机检测</string>
+    <string name="sms_history">短信记录</string>
+    <string name="capture_history">捕获记录</string>
+    <!-- adapter -->
+    <string name="CDMA">CDMA</string>
+    <string name="target_num">目标机号码：</string>
+    <string name="induced_num">诱发机号码：</string>
+    <string name="sms_type">短信类型：</string>
+    <string name="transmit_state">发送状态：</string>
+    <string name="record_time">记录时间：</string>
+
+    <!-- OAM读内存 -->
+    <string name="oam_read_get_data">获取数据</string>
+    <string name="oam_read_memory_address">内存地址</string>
+    <string name="oam_read_memory_length">内存大小</string>
+    <string name="oam_save_progress">保存进度:</string>
+
+    <!-- OAM写内存 -->
+
+    <!-- old授权管理 -->
+    <string name="authorization_management">授权查看</string>
+    <string name="gsm_target_location">GSM目标定位</string>
+    <string name="cdma_target_location">CDMA目标定位</string>
+    <string name="wcdma_target_location">WCDMA目标定位</string>
+    <string name="td_target_location">TD目标定位</string>
+    <string name="lte_target_location">LTE目标定位</string>
+    <string name="gsm_sms_monitoring">GSM短信监听</string>
+    <string name="cdma_sms_monitoring">CDMA短信监听</string>
+    <string name="wcdma_sms_monitoring">WCDMA短信监听</string>
+    <string name="td_sms_monitoring">TD短信监听</string>
+    <string name="gsm_voice_monitoring">GSM语音监听</string>
+    <string name="cdma_voice_monitoring">CDMA语音监听</string>
+    <string name="wcdma_voice_monitoring">WCDMA语音监听</string>
+    <string name="td_voice_monitoring">TD语音监听</string>
+    <string name="gsm_scan_code">GSM扫码</string>
+    <string name="cdma_scan_code">CDMA扫码</string>
+    <string name="wcdma_scan_code">WCDMA扫码</string>
+    <string name="td_scan_code">TD扫码</string>
+
+    <string name="disconnect">已与设备断开连接, 请重连</string>
+
+    <string name="tv_cancel_freq_all">清除频点</string>
+    <string name="tv_freq_id">No</string>
+    <string name="tv_freq">频点</string>
+    <string name="tv_freq_energy">能量</string>
+
+    <string name="tv_cid_and_tmsi_hostory_title">目标CID和TMSI记录</string>
+
+    <!-- 登录界面 -->
+    <string name="btn_login">登录</string>
+    <string name="login_userSign">用户名</string>
+    <string name="login_userPwd">密码</string>
+    <string name="login_only_can_input">qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789</string>
+    <string name="login_title">单兵LTE手机测向系统</string>
+    <string name="login_small_title">登入系统</string>
+
+    <string name="Countries_And_Regions">国家</string>
+    <string name="Countries_And_Regions_Induce">诱发号码</string>
+    <string name="Country">中国</string>
+
+    <!-- 邻小区界面 -->
+    <string name="neighbor_lte">LTE邻小区频点</string>
+    <string name="neighbor_3g">3G邻小区频点</string>
+    <string name="neighbor_2g">2G邻小区频点</string>
+
+    <!-- hint -->
+    <string name="required">必填</string>
+    <string name="optional">选填</string>
+
+    <!-- debug调试弹窗 -->
+    <string name="input_debug_passwd">请输入调试密码</string>
+    <string name="input_test_phone">请输入测试手机号码</string>
+
+    <!-- 调试数据获取 -->
+    <string name="current_mode">当前制式:</string>
+    <string name="acquisition_mode">获取模式:</string>
+    <string name="routine">常规</string>
+    <string name="synchronization">同步</string>
+    <string name="length">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;长度:</string>
+    <string name="frames_num">帧</string>
+    <string name="acquisition">获取</string>
+    <string name="tf_local_storage_space">TF 本地存储空间</string>
+    <string name="u_local_storage_space">U盘 本地存储空间</string>
+    <string name="dialog_hint">数据保存中,请稍等...</string>
+    <string name="u_disk_insertion">插入</string>
+    <string name="u_disc_pullout">拔出</string>
+    <string name="select_all">全选</string>
+    <string name="clean_tf_data">清除数据</string>
+    <string name="copy_to_u_disk">拷贝到U盘</string>
+    <string name="mode_setting_success">数传模式设置下发成功</string>
+    <string name="valid_integer">输入的数值过大</string>
+    <string name="debug_data_sensibility">灵敏度测试</string>
+    <string name="sensibility_switch">测试开关</string>
+    <string name="tab_sys">制式:</string>
+    <string name="tab_frequency">频率:</string>
+    <string name="title_time">时间</string>
+    <string name="title_freq">频率(MHz)</string>
+    <string name="title_fjbmx">检测门限(dB)</string>
+    <string name="fjb_test">门限检测</string>
+    <string name="threshold_statistic_tip">(统计前请关闭信号源发射)</string>
+    <string name="sensibility_percent">有效检测率</string>
+    <string name="sensibility_tip">(检测前请打开信号源)</string>
+    <string name="open_test">开启</string>
+    <string name="aux_level_mode">档位辅助模式</string>
+    <string name="pda_version">PDA版本</string>
+    <string name="auto_test">自动测试</string>
+    <string name="start_statistic">开始统计</string>
+    <string name="set_threshold">设置门限</string>
+    <string name="start_check">开始检测</string>
+    <string name="cus_test">手动测试</string>
+    <string name="times">次数:</string>
+    <string name="title_activity_hide_test">HideTestActivity</string>
+    <string name="cdma_card_induce">电信卡诱发</string>
+    <string name="not_cdma_card_induce">非电信卡诱发</string>
+    <string name="lte_normal_capture">LTE常用短信</string>
+    <string name="lte_new_capture">LTE新捕获</string>
+    <string name="lte_precision_capture">LTE精准捕获</string>
+    <string name="acquisition_controller">请求存数:</string>
+    <string name="device_status">设备状态</string>
+    <string name="device_status_init">正在初始化</string>
+    <string name="device_status_setting">正在配置中:</string>
+    <string name="device_status_finished">正常运行</string>
+    <string name="device_status_ready">设备已就绪, 可进行下一步操作</string>
+    <string name="bluetooth_debug_switch">调试日志</string>
+    <string name="change_format_refresh_30s">正在配置, 大概需30秒…</string>
+    <string name="change_format_refresh_60s">制式硬切换, 大概需60秒…</string>
+    <string name="input_notification_phone">请输入通知号码</string>
+    <string name="device_status_error">状态错误</string>
+    <string name="module_433">433模块</string>
+    <string name="frequency_setting">下发频点</string>
+    <string name="system_self_check">系统自检</string>
+    <string name="dt_mode_receive">接收模式</string>
+    <string name="need_to_upgrade">433启动异常,请重新升级</string>
+    <string name="tips">提示</string>
+    <string name="upgrade_success">升级成功</string>
+    <string name="upgrade_failed">升级失败</string>
+    <string name="upgrade_length_error">数据长度错误</string>
+    <string name="upgrade_frame_error">帧号错误</string>
+    <string name="upgrade_flash_error">写flash错误</string>
+    <string name="check_flash_version">检查flash版本</string>
+</resources>

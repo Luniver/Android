@@ -1,0 +1,8 @@
+//include ':wifi_location'
+include ':share_ui'
+//include ':network_protocol'
+include ':sms_induce'
+include ':common_lib'
+//include ':fragmentation_core'
+include ':ble_lib'
+include ':sczd'

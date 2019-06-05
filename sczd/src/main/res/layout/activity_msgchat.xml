@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/v_line"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/titlelayout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:cacheColorHint="#00000000"
+        android:clickable="false"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:focusable="false"
+        android:scrollbars="none" />
+
+<!--   <View
+      android:id="@+id/v_line"
+        style="@style/above_button_line"
+        android:layout_above="@+id/bt_search_record" />
+        <Button
+            android:id="@+id/bt_search_record"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:onClick="SearchRecord"
+            android:text="查询历史记录"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" /> -->
+       
+
+</RelativeLayout>

@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="hrst.singlepawn.aboutus.CheckVersionActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="#03214e" >
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_search_unit"
+            android:paddingRight="3dp"
+            android:text="0"
+            android:textColor="#03fc36"
+            android:visibility="invisible"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_search_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="@string/tv_search_unit"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/rg_lte_operators"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_lte_mobile_operator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_mobile"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_unicom_operator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_unicom"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_telecom_operator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_telecom"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_choosemode"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_locate_information"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_19" />
+            <!-- 捕获方案 -->
+
+            <RadioGroup
+                android:id="@+id/rg_lte_acquisition_scheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_lte_new_capture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_new_capture"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_precision_capture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_precision_capture"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_conventional_capture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_conventional_capture"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+
+            <View style="@style/line_gray_night" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_lte_target_numberphoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="40dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_target_number"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <RelativeLayout
+                android:id="@+id/rl_lte_imsi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputTargetIMSI" >
+
+                <TextView
+                    android:id="@+id/tv_lte_target_imsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/required"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="39dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_target_imsi"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputTargetMMEC" >
+
+                <TextView
+                    android:id="@+id/tv_lte_target_mmec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="选填"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="21dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/tv_target_mmec"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputTargetTMSI" >
+
+                <TextView
+                    android:id="@+id/tv_lte_target_tmsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="选填"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="33dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/tv_target_tmsi"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <LinearLayout
+                android:id="@+id/ll_target_country_lte"
+                android:layout_width="match_parent"
+                android:layout_height="52.5dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rala_chose_country_lte"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="8" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/Countries_And_Regions_Induce"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/tv_chosed_country_lte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/Country"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+                    <!--
+                         <View
+		                android:layout_width="match_parent"
+		                android:layout_height="0.1dp"
+		                android:layout_alignParentBottom="true"
+		                android:background="#dbdbdb" />
+                    -->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_country_lte"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:text="+86"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+            <View style="@style/line_gray_night" 
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:onClick="inputInducedNumber" >
+
+                <TextView
+                    android:id="@+id/tv_lte_induced_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:hint="@string/required"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="20dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/tv_induced_number"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <RelativeLayout
+                android:id="@+id/rl_lte_message_threshold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:background="@drawable/textview_selector"
+                android:gravity="center_vertical"
+                android:onClick="inputMessageThreshold" >
+
+                <TextView
+                    android:id="@+id/tv_lte_message_threshold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="@string/optional"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/light_blue"
+                    android:textSize="@dimen/textsize_17" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:clickable="false"
+                        android:drawablePadding="40dp"
+                        android:drawableRight="@drawable/input"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/tv_message_threshold"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/textsize_19" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_gray_night" />
+
+            <RadioGroup
+                android:id="@+id/rg_lte_frequencys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_lte_intelligent_sweep_frequency"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_intelligent_sweep_frequency"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_fixed_ferquency_selection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_fixed_ferquency_selection"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_fixed_ferquency_selection_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_fixed_ferquency_selection_2"
+                    android:textColor="#ffffff"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_full_frequency_scanning"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_full_frequency_scanning"
+                    android:textColor="#ffffff"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_lte_freqs_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="invisible" >
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_1"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_2"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_3"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_4"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_lte_freqs_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="invisible" >
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_5"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_6"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_7"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edt_lte_freq_8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_freq_8"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_choosemode"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_positioning_start_mode"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_19" />
+
+            <RadioGroup
+                android:id="@+id/rg_lte_startup_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_lte_timer_start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_timer_start"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_matching_start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_matching_start"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+
+                <RadioButton
+                    android:id="@+id/rb_lte_manual_start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/rg_bg"
+                    android:text="@string/rb_manual_start"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textsize_17" />
+            </RadioGroup>
+
+         	
+            <EditText
+                android:id="@+id/edt_lte_out_time"
+           	    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edt_input"
+                android:gravity="center_horizontal"
+                android:hint="@string/edt_out_time"
+                android:maxLength="4"
+                android:inputType="number"
+                android:textColor="#ffffff"
+                android:digits="0123456789" 
+                 />
+
+            <LinearLayout
+                android:id="@+id/ll_lte_tac_cid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical" >
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+	                    android:id="@+id/edt_lte_tac_1"
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/edt_input"
+	                    android:gravity="center_horizontal"
+	                    android:hint="@string/edt_tac_1"
+	                    android:maxLength="5"
+	                    android:inputType="number"
+	                    android:visibility="gone"
+	                    android:textColor="#ffffff"
+	                    android:digits="0123456789" />
+                     <EditText
+	                    android:id="@+id/edt_lte_cid_1"
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/edt_input"
+	                    android:gravity="center_horizontal"
+	                    android:hint="@string/edt_Cid_1"
+	                    android:maxLength="9"
+	                    android:textColor="#ffffff"
+	                    android:digits="0123456789ABCDEFabcdef" />
+                </LinearLayout>
+                
+                <Spinner
+                    android:id="@+id/sp_lte_or_with"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/or_with"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal" />
+                <LinearLayout 
+                    android:id="@+id/ll_lte_tac_cid_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <EditText
+	                    android:id="@+id/edt_lte_tac_2"
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/edt_input"
+	                    android:gravity="center_horizontal"
+	                    android:hint="@string/edt_tac_2"
+	                    android:maxLength="5"
+	                    android:inputType="number"
+	                    android:visibility="gone"
+	                    android:textColor="#ffffff"
+	                    android:digits="0123456789/" />
+                     <EditText
+	                    android:id="@+id/edt_lte_cid_2"
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/edt_input"
+	                    android:gravity="center_horizontal"
+	                    android:hint="@string/edt_Cid_2"
+	                    android:maxLength="9"
+	                    android:textColor="#ffffff"
+	                    android:digits="0123456789ABCDEFabcdef" />
+                </LinearLayout>
+                <LinearLayout 
+                    android:id="@+id/ll_lte_tac_cid_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <EditText
+	                    android:id="@+id/edt_lte_tac_3"
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/edt_input"
+	                    android:gravity="center_horizontal"
+	                    android:hint="@string/edt_tac_3"
+	                    android:maxLength="5"
+	                    android:inputType="number"
+	                    android:visibility="gone"
+	                    android:textColor="#ffffff"
+	                    android:digits="0123456789" />
+                     <EditText
+	                    android:id="@+id/edt_lte_cid_3"
+	                    android:layout_width="0dp"
+	                    android:layout_weight="1"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/edt_input"
+	                    android:gravity="center_horizontal"
+	                    android:hint="@string/edt_Cid_3"
+	                    android:maxLength="9"
+	                    android:textColor="#ffffff"
+	                    android:digits="0123456789ABCDEFabcdef" />
+                </LinearLayout>
+<!--                 <EditText
+                    android:id="@+id/edt_lte_tac_and_cid_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_tacAndCid_1"
+                    android:maxLength="10"
+                    android:text="3600/1000"
+                    android:textColor="#ffffff"
+                    android:digits="0123456789/"
+                    android:visibility="invisible" />
+
+                <Spinner
+                    android:id="@+id/sp_lte_or_with"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/or_with"
+                    android:gravity="center_horizontal"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/edt_lte_tac_and_cid_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_tacAndCid_2"
+                    android:maxLength="10"
+                    android:text="3600/1000"
+                    android:digits="0123456789/"
+                    android:textColor="#ffffff"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/edt_lte_tac_and_cid_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_input"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/edt_tacAndCid_3"
+                    android:maxLength="10"
+                    android:text="3600/1000"
+                    android:digits="0123456789/"
+                    android:textColor="#ffffff"
+                    android:visibility="invisible" /> -->
+            </LinearLayout>
+            <Button
+		        android:id="@+id/btn_locate_lte"
+		        android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:background="@drawable/btn_next_style"
+		        android:text="@string/locate"
+		        android:textColor="@color/white"
+		        android:textSize="@dimen/textsize_19" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

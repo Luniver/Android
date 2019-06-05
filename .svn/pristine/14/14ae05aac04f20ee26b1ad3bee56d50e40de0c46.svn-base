@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="timeline_home_bg_color">#f6f6f6</color>
+    <color name="rb_background">#03444E</color><!-- rb按钮选择 -->
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black">#000000</color><!-- 黑色 -->
+    <color name="light_gray">#9f9f9f</color><!-- 浅灰色 -->
+    <color name="light_blue">#52a4d9</color><!-- 浅蓝色 -->
+    <color name="gray">#6d6d6d</color><!-- 灰色 -->
+     <color name="transparent_80">#d0000000</color>
+     <color name="blue_num">#0099ff</color>
+     <color name="green_deep">#023A43</color>
+    <color name="red">#dd0000</color><!-- 红色 -->
+    <color name="red_deep">#aa0000</color>
+    <color name="green">#03fc36</color><!-- 绿色 -->
+    <color name="yellow">#FFFF00</color><!-- 黄色 -->
+    <color name="fresh_green">#57A40D</color><!-- 鲜绿色 -->
+    <color name="light_black">#1c1c1c</color><!-- 浅黑色 -->
+    <color name="blue">#0066ff</color><!-- 蓝色 -->
+    <color name="deep_black">#454545</color><!-- 深点黑色 、 序号按钮未点击时背景颜色-->
+    <color name="box_spliter">#333333</color><!-- 输入框的上下边框的颜色 -->
+      <color name="btn_green_checked">#008000</color><!-- 输入框的上下边框的颜色 -->
+    <color name="box_background">#067585</color><!-- 底部按钮未点击、小区信息点击、输入框点击时背景颜色 -->
+    <color name="rb_uncheck_background">#454444</color><!-- RadioButton禁用时背景颜色 -->
+    <color name="title_bar_spliter">#94f7ff</color><!-- 标题栏的上下边框 -->
+    <color name="title_bar_background">#03214e</color><!-- 菜单按钮未点击时、标题栏背景颜色 -->
+    <color name="bottom_button_spliter">#efeded</color><!-- 底部按钮上边框颜色 -->
+    <color name="bottom_button_check_background">#07a0b6</color><!-- 底部按钮点击时背景颜色 -->
+    <color name="more_check_background">#326ec6</color><!-- 菜单按钮点击时背景颜色 -->
+    <color name="serial_number_check">#03444e</color><!-- 序号按钮点击时背景颜色 -->
+    <color name="input_box_background">#141f29</color><!-- 输入框背景颜色 -->
+    <color name="input_interface_background">#1d2e3c</color><!-- 输入界面背景颜色 -->
+    <color name="bluetooth_open">#007d0f</color><!-- 蓝牙打开背景颜色 -->
+    <color name="bluetooth_close">#d30010</color><!-- 蓝牙关闭背景颜色 -->
+    <color name="bluetooth_pressed">#d30d6f</color><!-- 蓝牙点击颜色 -->
+    <color name="dialog_title_background">#45637b</color><!-- 对话框标题背景颜色 -->
+    <color name="btn_enable">#5a676f</color>
+    <color name="listgray">#313131</color><!-- list灰色 -->
+    <color name="transparent">#00000000</color><!-- 透明 -->
+    <color name="textcolor_frequency_gray">#1c1c1c</color><!-- 频点未激活时的颜色 -->
+    <color name="hint_red">#6a0209</color><!-- 蓝牙断开连接时的颜色-->
+    <color name="bar_blue">#0cb9d0</color><!-- 柱子的蓝色 -->
+    <color name="bar_red">#fc0c0c</color><!-- 柱子的红色 -->
+    <color name="bar_purple">#5008b2</color><!-- 柱子的紫色 -->
+    <color name="list_background">#1D2E3C</color>
+      
+          <!-- 字体颜色 -->
+    <color name="font_color">#fff</color>
+    
+    <!-- 柱子测试颜色 -->
+     <color name="column_red">#fff</color>
+     <color name="column_qing_se">#00FF00</color>
+     <color name="column_zi_se">#FF00FF</color>
+     <color name="column_shen_lan_se">#000033</color>
+     <color name="column_huang_se">#FFD700</color>
+     <color name="column_zhong_se">#8B2500</color>
+     <color name="column_fen_se">#ffccff</color>
+     
+         <!-- 登录输入框提示字体颜色 -->
+    <color name="login_font_tips_color">#03EDFA</color>
+    <color name="login_normal_color">#00EAFF</color>
+    <color name="login_focused_color">#108691</color>
+    <color name="login_title_color">#0de9f9</color>
+    
+    <color name="bg_color">#F4F3F3</color>
+    <color name="bg_dialog_color">#293640</color>
+      
+</resources>

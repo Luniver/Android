@@ -1,0 +1,367 @@
+<!-- 
+	@author   李家威
+	@describe 系统设置xml
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0.5dp"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <LinearLayout
+        android:id="@+id/layout_Setting_Top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_visual_patterns"
+            android:layout_width="match_parent"
+            android:layout_height="54.5dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_layout_selector" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tv_visual_patterns">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/shijuemoshi"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/visual_patterns"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/shuruquyu" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_visual_patterns"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="@string/night_mode"
+                android:textColor="#55ADE5"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="#94f7ff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:visibility="gone"
+            android:background="#00204E" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/speech_settings"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="#94f7ff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_Setting_Middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_Setting_Top"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 语音 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll__voice_countoff"
+                    android:layout_width="match_parent"
+                    android:layout_height="52.5dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:drawableLeft="@drawable/yuyinshezhi"
+                        android:drawablePadding="8dp"
+                        android:scaleY="0.8"
+                        android:text="" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:maxWidth="230dp"
+                            android:text="@string/voice_count_off"
+                            android:textSize="19sp" />
+
+                        <CheckBox
+                            android:id="@+id/cb_voice_countoff"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/checkbox_selector"
+                            android:button="@null" />
+						<View 
+						    style="@style/line_gray_night"
+						    android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            
+                <!-- 即将接近目标时中文提醒 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_near_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="72.5dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:drawableLeft="@drawable/yuyinshezhi"
+                        android:drawablePadding="8dp"
+                        android:scaleY="0.8"
+                        android:text="" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="185dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:maxWidth="230dp"
+                            android:text="@string/near_target"
+                            android:textSize="19sp" />
+						<View 
+						    style="@style/line_gray_night"
+						    android:layout_alignParentBottom="true" />
+
+                        <CheckBox
+                            android:id="@+id/cb_near_target"
+                            android:layout_width="65dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/checkbox_selector"
+                            android:button="@null" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 设备温度过高时提醒 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_temp_high"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/cb_temp_high"
+                        android:background="@drawable/textview_selector" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:drawableLeft="@drawable/yuyinshezhi"
+                            android:drawablePadding="8dp"
+                            android:scaleY="0.8" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/shuruquyu" />
+
+                        <TextView
+                            android:id="@+id/tv_temp_high"
+                            android:layout_width="185dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/textView1"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/textView1"
+                            android:maxWidth="230dp"
+                            android:singleLine="false"
+                            android:text="@string/temp_high"
+                            android:textSize="19sp" />
+                    </RelativeLayout>
+					<View 
+					    style="@style/line_gray_night"
+					    android:layout_marginLeft="40dp"
+						android:layout_alignParentBottom="true" />
+
+                    <CheckBox
+                        android:id="@+id/cb_temp_high"
+                        android:layout_width="65dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null" />
+                </RelativeLayout>
+
+                <!-- 主机电量不足时提醒 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_host_deficiency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/cb_host_deficiency"
+                        android:background="@drawable/textview_selector" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:drawableLeft="@drawable/yuyinshezhi"
+                            android:drawablePadding="8dp"
+                            android:scaleY="0.8" />
+
+                        <TextView
+                            android:id="@+id/tv_host_deficiency"
+                            android:layout_width="185dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/textView2"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/textView2"
+                            android:maxWidth="230dp"
+                            android:singleLine="false"
+                            android:text="@string/temp_high"
+                            android:textSize="19sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/shuruquyu" />
+                    </RelativeLayout>
+					<View 
+					    style="@style/line_gray_night"
+						android:layout_alignParentBottom="true" />
+
+                    <CheckBox
+                        android:id="@+id/cb_host_deficiency"
+                        android:layout_width="65dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_reset_default"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_reset_default"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btn_reset_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_selector"
+            android:text="@string/reset_default"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</RelativeLayout>

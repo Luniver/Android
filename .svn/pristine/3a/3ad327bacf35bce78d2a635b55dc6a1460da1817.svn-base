@@ -1,0 +1,607 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drop="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_top_nul"
+                android:layout_width="match_parent"
+                android:layout_height="88dp" 
+                android:orientation="vertical">
+            </LinearLayout>
+
+             <!-- 诱发设置内容栏 -->
+            <LinearLayout
+                android:id="@+id/ll_setting_incude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_top_nul"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_msm_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="52.5dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/background_selector"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/send_notecontent"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_msm_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:paddingRight="20dp"
+                        android:textColor="@color/light_blue"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_cdma_alleyway"
+                    android:layout_width="match_parent"
+                    android:layout_height="52.5dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/background_selector"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/send_cdma_alleyway"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_cdma_alleyway"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:paddingRight="20dp"
+                        android:textColor="@color/light_blue"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line"
+                    android:layout_marginLeft="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp" >
+
+                        <TextView
+                            android:id="@+id/tv_msm_dotime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/do_time"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <hrst.singlepawn.view.DropEditText
+                            android:id="@+id/ed_msm_timenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="1"
+                            android:maxLength="2"
+                            android:paddingRight="5dp"
+                            android:textColor="@color/light_blue"
+                            android:textSize="17sp"
+                            drop:drawableRight="@drawable/drop"
+        					drop:dropMode="wrap_content" />
+
+                        
+
+                        <TextView
+                            android:id="@+id/tv_msm_timenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_number"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="52.5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_call_dotime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/do_time"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <hrst.singlepawn.view.DropEditText
+                            android:id="@+id/ed_call_timenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="1"
+                            android:textColor="@color/light_blue"
+                            android:maxLength="2"
+                            android:textSize="17sp"
+                            drop:drawableRight="@drawable/drop"
+        					drop:dropMode="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_call_timenumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/time_number"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="10dp"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <View
+                        style="@style/title_line_half"
+                        android:layout_marginLeft="15dp" />
+
+                    <View
+                        style="@style/title_line_half"
+                        android:layout_marginLeft="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp" >
+
+                        <TextView
+                            android:id="@+id/tv_msm_outtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/out_time"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <hrst.singlepawn.view.DropEditText
+                            android:id="@+id/ed_msm_outtime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="30000"
+                            android:maxLength="5"
+                            android:textColor="@color/light_blue"
+                            android:textSize="17sp"
+                            drop:drawableRight="@drawable/drop"
+        					drop:dropMode="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_msm_time_ms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_ms"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="52.5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_call_interval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/do_interval"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <hrst.singlepawn.view.DropEditText
+                            android:id="@+id/ed_call_interval"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="7000"
+                            android:maxLength="5"
+                            android:textColor="@color/light_blue"
+                            android:textSize="17sp"
+                            drop:drawableRight="@drawable/drop"
+        					drop:dropMode="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_call_interval_ms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_ms"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="10dp"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <View
+                        style="@style/title_line_half"
+                        android:layout_marginLeft="15dp" />
+
+                    <View
+                        style="@style/title_line_half"
+                        android:layout_marginLeft="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52.5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp" >
+
+                        <TextView
+                            android:id="@+id/tv_msm_interval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/do_interval"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <hrst.singlepawn.view.DropEditText
+                            android:id="@+id/ed_msm_interval"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:maxLength="5"
+                            android:textColor="@color/light_blue"
+                            android:textSize="17sp"
+                            drop:drawableRight="@drawable/drop"
+        					drop:dropMode="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_msm_interval_ms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_ms"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="52.5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_call_hangup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hangup"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <hrst.singlepawn.view.DropEditText
+                            android:id="@+id/ed_call_hangup"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="3000"
+                            android:maxLength="5"
+                            android:textColor="@color/light_blue"
+                            android:textSize="17sp"
+                            drop:drawableRight="@drawable/drop"
+        					drop:dropMode="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_call_hangup_ms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_ms"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="10dp"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+             <!-- 诱发选择栏 -->
+            <RelativeLayout
+                android:id="@+id/rl_top_1"
+                android:layout_width="match_parent"
+                android:layout_height="52.5dp"
+                android:background="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_msm_induce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/check_selector"
+                    android:drawablePadding="8dp"
+                    android:text="@string/msm_induce"
+                    android:textColor="#ffffff"
+                    android:textSize="19sp" />
+                <CheckBox
+                    android:id="@+id/cb_call_induce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/check_selector"
+                    android:drawablePadding="8dp"
+                    android:text="@string/call_induce"
+                    android:textColor="#ffffff"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+
+            <!-- 诱发设置标题栏 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_incude_more"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/rl_top_1"
+                android:background="#03214e" >
+
+                <View
+                    style="@style/title_line"
+                    android:layout_alignParentTop="true" />
+
+                <View
+                    style="@style/title_line"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageView
+                    android:id="@+id/iv_incude_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/up"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_induce"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_dsp"
+                    style="@style/ww_drawable_tv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="DSP" />
+
+            </RelativeLayout>
+
+            <!-- 底部诱发结果布局  350是为了有足够的空间进行动画-->
+            <RelativeLayout
+                android:id="@+id/rl_result_incude_more_all"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/ll_setting_incude" >
+
+                <LinearLayout
+                    android:id="@+id/ll_botttom_nul"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                 <!-- 诱发设置结果栏 -->
+                <LinearLayout
+                    android:id="@+id/ll_result_incude"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_below="@id/ll_botttom_nul" >
+					<ScrollView 
+					     android:id="@+id/sv_induce"
+					     android:layout_width="fill_parent"
+					     android:layout_height="fill_parent"
+					     android:background="@android:color/black"
+					     android:scrollbars="none">
+	                    <TextView
+	                        android:id="@+id/tv_incude_result"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="fill_parent"
+	                        android:padding="10dp"
+	                        android:textSize="15dp" />
+	                  </ScrollView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_result_incude_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#03214e" >
+
+                    <View
+                        style="@style/title_line"
+                        android:layout_alignParentTop="true" />
+
+                    <View
+                        style="@style/title_line"
+                        android:layout_alignParentBottom="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17.5dp"
+                        android:text="@string/result_induce"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+					<RelativeLayout 
+					    android:layout_width="50dp"
+					    android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentRight="true">
+	                    <ImageView
+	                        android:id="@+id/iv_incude_remove"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:background="@drawable/rubbish"
+	                        android:layout_centerInParent="true"
+	                        android:clickable="true" />
+					</RelativeLayout>
+                    
+
+                    <ImageView
+                        android:id="@+id/iv_incude_result_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/up"
+                        android:clickable="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+</LinearLayout>

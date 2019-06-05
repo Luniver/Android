@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	作用：注册信息XML
+	作者：沈月美
+	日期：2014-4-11
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 统一的标题栏 -->
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <!-- 客户单位 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:drawablePadding="6dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="@string/customer_unit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_19" />
+
+            <TextView
+                android:id="@+id/tv_customer_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+        </RelativeLayout>
+
+        <!-- 画横线 -->
+
+        <View
+            style="@style/line_gray_night" />
+
+        <!-- 联系人 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contacter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_19" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/input"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_contacter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="18dp"
+                android:text=""
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+        </RelativeLayout>
+
+        <!-- 画横线 -->
+
+         <View
+            style="@style/line_gray_night" />
+
+        <!-- 联系电话 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:background="@drawable/textview_selector"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/contact_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_19" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/input"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_contact_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="18dp"
+                android:text=""
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+        </RelativeLayout>
+        <!-- 画横线 -->
+
+         <View
+            style="@style/line_gray_night" />
+
+        <!-- 备注 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/note"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_19" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/input"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:maxLength="16"
+                android:text=""
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+        </RelativeLayout>
+        <!-- 号码制式标题 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/secondary_title_bar_height"
+            android:background="#03214e" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/title_bar_spliter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/secondary_title_bar_left"
+                android:text="@string/number_format"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/title_bar_spliter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <CheckBox
+                android:id="@+id/cb_reg_info_gsm"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/reg_check_selector"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/gsm"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_17" />
+
+            <CheckBox
+                android:id="@+id/cb_reg_info_cdma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/cb_reg_info_gsm"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/reg_check_selector"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/cdma"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_17" />
+        </RelativeLayout>
+
+         <View
+            style="@style/line_gray_night" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <CheckBox
+                android:id="@+id/cb_reg_info_wcdma"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/reg_check_selector"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/wcdma"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_17" />
+
+            <CheckBox
+                android:id="@+id/cb_reg_info_tdscdma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/cb_reg_info_wcdma"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/reg_check_selector"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/tdscdma"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_17" />
+        </RelativeLayout>
+
+         <View
+            style="@style/line_gray_night" />
+    </LinearLayout>
+
+    <!-- 开通新制式 -->
+
+    <View
+        style="@style/above_button_line"
+        android:layout_above="@+id/bt_next" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tv_clear_all_frequency"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:height="@dimen/first_height_52.5"
+            android:onClick="openNewFormat"
+            android:text="@string/open_new_frament"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="#AEB1B1" />
+
+        <Button
+            android:id="@+id/tv_fixed_search_start"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/first_height_52.5"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:height="50dp"
+            android:onClick="updateRegCode"
+            android:text="@string/update_registcode"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:gravity="center"
+        android:onClick="openNewFormat"
+        android:text="开通新制式"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_19"
+        android:visibility="gone" />
+
+</RelativeLayout>

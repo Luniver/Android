@@ -1,0 +1,494 @@
+<!--
+	@author  邓丰伟
+	@describe cdma目标定位
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_format"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_below="@+id/titlelayout" >
+
+        <TextView
+            android:id="@+id/tv_format_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/current_format"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_format_cdma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/light_blue"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_17" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choosetarget"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_format" >
+<RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@drawable/bg_choosemode" >
+
+        <TextView
+            android:id="@+id/tv_way_cdma1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/choose_target_way"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+    </RelativeLayout>
+        <RadioGroup
+            android:id="@+id/rg_cdma_locate_chooseway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_cdma_locate_chooseway1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/radio_style"
+                android:textSize="19sp" 
+                android:background="@null"
+                    android:button="@null"
+                    android:paddingTop="10dp"
+                android:checked="true"
+                android:textColor="#bbffffff"
+                android:text="@string/cdma_target_way1" />
+
+            <RadioButton
+                android:id="@+id/rb_cdma_locate_chooseway2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                    android:button="@null"
+                      android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                android:drawableLeft="@drawable/radio_style"
+                android:textSize="@dimen/textsize_19" 
+                android:textColor="#bbffffff"
+                android:text="@string/cdma_target_way2" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ll_choosetarget"
+        android:background="@drawable/bg_choosemode" >
+
+        <TextView
+            android:id="@+id/tv_way_cdma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/set_param"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_15" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cdma_locate_chooseway1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_settings_title"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical" >
+
+            <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_targetPhoneNumber_cdma_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+
+            <LinearLayout
+                android:id="@+id/ll_a"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_induced_esn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="66dp"
+                    android:drawableRight="@drawable/input"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/light_blue"
+                    android:text="@string/tv_target_num"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+		<View style="@style/line_gray_night" />
+        <RelativeLayout
+            android:id="@+id/layout_srcesn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:onClick="inducedESN" >
+
+            <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_inducedesn_cdma_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/ll1"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_induced_esn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="49dp"
+                    android:drawableRight="@drawable/input"
+                    android:gravity="center_vertical"
+                    android:text="@string/induced_phone_esn"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/line_gray_night" />
+
+        <RelativeLayout
+            android:id="@+id/layout_srcimsi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:onClick="inducedIMSI" 
+            android:visibility="gone">
+
+            <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_inducedimsi_cdma_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_induced_imsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="47dp"
+                    android:drawableRight="@drawable/input"
+                    android:gravity="center_vertical"
+                    android:text="@string/induced_phone_imsi"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/line_gray_night" />
+
+        <RelativeLayout
+            android:id="@+id/layout_targetesn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:onClick="targetESN" >
+
+            <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_targetesn_cdma_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/ll3"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:hint="ESN选填"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_target_esn_cdma_locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="49dp"
+                    android:drawableRight="@drawable/input"
+                    android:gravity="center_vertical"
+                    android:text="@string/target_phone_esn"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View style="@style/line_gray_night" />
+
+        <RelativeLayout
+            android:id="@+id/layout_targetimsi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:onClick="targetIMSI" >
+
+            <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_targetimsi_cdma_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/ll4"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:hint="请输入IMSI"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_target_imsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="47dp"
+                    android:drawableRight="@drawable/input"
+                    android:gravity="center_vertical"
+                    android:text="@string/target_phone_imsi"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View style="@style/line_gray_night" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_cdma_locate_chooseway2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_cdma_locate_chooseway1"
+        android:orientation="vertical" >
+        <LinearLayout
+		        android:id="@+id/ll_target_country_cdma"
+		        android:layout_width="match_parent"
+		        android:layout_height="52.5dp"
+		        android:gravity="center_vertical"
+		        android:visibility="gone"
+		        android:orientation="horizontal" >
+		
+		        <RelativeLayout
+		            android:id="@+id/rala_chose_country_cdma"
+		            android:layout_width="0dp"
+		            android:layout_weight="8"
+		            android:layout_height="48dp" >
+		
+		            <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="10dp"
+		                android:text="@string/Countries_And_Regions_Induce"
+		                android:textColor="@color/white"
+		                android:textSize="19sp" />
+		
+		            <TextView
+		                android:id="@+id/tv_chosed_country_cdma"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+		                android:layout_centerVertical="true"
+		                android:layout_marginRight="10dp"
+		                android:text="@string/Country"
+		                android:textColor="@color/white"
+		                android:textSize="19sp" />
+		            
+
+		
+		<!--             <View
+		                android:layout_width="match_parent"
+		                android:layout_height="0.1dp"
+		                android:layout_alignParentBottom="true"
+		                android:background="#dbdbdb" /> -->
+		        </RelativeLayout>
+		        <TextView
+		                android:id="@+id/tv_country_cdma"
+		                android:layout_width="0dp"
+		                android:layout_weight="2"
+		                android:layout_height="wrap_content"
+		                android:layout_marginRight="10dp"
+		                android:text="+86"
+		                android:textColor="@color/white"
+		                android:textSize="19sp" />
+		    </LinearLayout>
+		     <View style="@style/line_gray_night" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textview_selector"
+            android:gravity="center_vertical"
+            android:onClick="inputInducedPhone" >
+
+            <com.hrst.common.ui.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_cdma_locate_induce_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:hint="请输入诱发机号码"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/textsize_17" />
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_induced_esn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="49dp"
+                    android:drawableRight="@drawable/input"
+                    android:gravity="center_vertical"
+                    android:text="@string/induced_phone"
+                    android:textSize="@dimen/textsize_19" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View style="@style/line_gray_night" />
+    </LinearLayout>
+    
+
+    <View
+        style="@style/line_gray_night"
+        android:layout_below="@+id/layout_settings" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/btn_locate_cdma"
+        android:background="@color/bottom_button_spliter" />
+
+    <Button
+        android:id="@+id/btn_locate_cdma"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_next_style"
+        android:onClick="cdmaLocate"
+        android:text="@string/locate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_19" />
+
+    <Chronometer
+        android:id="@+id/chorm_cdma_locate"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+</RelativeLayout>

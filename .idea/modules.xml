@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android_test.iml" filepath="$PROJECT_DIR$/Android_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ble_lib/ble_lib.iml" filepath="$PROJECT_DIR$/ble_lib/ble_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_lib/common_lib.iml" filepath="$PROJECT_DIR$/common_lib/common_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sczd/sczd.iml" filepath="$PROJECT_DIR$/sczd/sczd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/share_ui/share_ui.iml" filepath="$PROJECT_DIR$/share_ui/share_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sms_induce/sms_induce.iml" filepath="$PROJECT_DIR$/sms_induce/sms_induce.iml" />
+    </modules>
+  </component>
+</project>

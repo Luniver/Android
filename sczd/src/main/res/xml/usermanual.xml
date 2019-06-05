@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usermanuals>
+    <usermanual id="main" >
+        <title>首页</title>
+        <content>首页详细说明</content>
+	</usermanual>
+	  <usermanual id="systemsettings" >
+        <title>系统设置</title>
+        <content>系统设置详细说明</content>
+	</usermanual>
+</usermanuals>

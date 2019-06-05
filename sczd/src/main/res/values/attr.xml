@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textcolor" format="reference|color" />
+	<attr name="bg" format="reference|color" />
+	
+    <declare-styleable name="DropEditText">
+       <attr name="drawableRight" format="reference" />
+       <attr name="dropMode">
+           <enum name="flow_parent" value="0" />
+           <enum name="wrap_content" value="1" />
+       </attr>
+       <attr name="hint" format="string|reference" />
+   </declare-styleable>
+   
+   <declare-styleable name="HorizontalProgressBarWithProgress">
+        <attr name="progress_text_color" format="color"/>
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_offset" format="dimension"/>
+        <attr name="progress_reach_color" format="color"/>
+        <attr name="progress_reach_height" format="dimension"/>
+        <attr name="progress_unreach_color" format="color"/>
+        <attr name="progress_unreach_height" format="dimension"/>
+    </declare-styleable>
+</resources>

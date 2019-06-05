@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	@author   刘兰
+	@describe 小区信息Activity
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_searchtype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_height_52.5"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" 
+        android:onClick="searchType"
+        android:background="@drawable/bg_layout_selector"
+        android:paddingLeft="@dimen/margin_10" >
+
+		<LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="@dimen/first_height_52.5"
+		    android:layout_weight="2"
+		    android:paddingRight="5dp"
+		    android:orientation="horizontal" >
+		
+		    <TextView
+		        android:id="@+id/tv_search"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:layout_weight="8"
+		        android:drawableLeft="@drawable/searchtype_icon"
+		        android:drawablePadding="6dp"
+		        android:gravity="center_vertical"
+		        android:text="@string/tv_search_type"
+		        android:textColor="#ffffff"
+		        android:textSize="@dimen/textsize_19" />
+		
+		    <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:layout_weight="1"
+		        android:background="@drawable/input_area"
+		        android:contentDescription="@string/action_settings"
+		        android:drawablePadding="3dp" />
+		</LinearLayout>
+		
+		<!-- 盲搜结果 -->
+		
+		    <TextView
+		        android:id="@+id/tv_search_type"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:layout_weight="1"
+		        android:gravity="center_horizontal"
+		        android:contentDescription="@string/action_settings"
+		        android:text="@string/tv_blindsearch" 
+		        android:textColor="@color/light_blue"
+		        android:textSize="@dimen/textsize_17" />
+		</LinearLayout>
+
+	    <View
+	        style="@style/line_gray_night"
+	        android:layout_marginLeft="50dp" />
+
+    	<LinearLayout
+   			android:id="@+id/ll_target"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/first_height_52.5"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:onClick="position"
+            android:background="@drawable/bg_layout_selector"
+            android:paddingLeft="@dimen/margin_10" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/first_height_52.5"
+                    android:layout_weight="2"
+                    android:paddingRight="5dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"
+                        android:drawableLeft="@drawable/position_icon"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/target"
+                        android:textSize="@dimen/textsize_19" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_area"
+                        android:contentDescription="@string/action_settings"
+                        android:drawablePadding="3dp" />
+                </LinearLayout>
+
+                <!-- 目标定位结果 -->
+
+                <TextView
+                    android:id="@+id/tv_position"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/action_settings"
+                    android:text="搜索中"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_17"
+                    />
+            </LinearLayout>
+            <View
+		        style="@style/line_gray_night"
+		        android:layout_marginLeft="50dp" />
+
+		    <LinearLayout
+		        android:id="@+id/ll_target_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_height_52.5"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_layout_selector"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_10" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/first_height_52.5"
+                    android:layout_weight="2"
+                    android:paddingRight="5dp"
+                   
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_targetMonitor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"
+                        android:drawableLeft="@drawable/img_monitor_little"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/target_jk"
+                        android:textSize="@dimen/textsize_19" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/input_area"
+                        android:contentDescription="@string/action_settings"
+                        android:drawablePadding="3dp" />
+                </LinearLayout>
+
+                <!-- 目标定位结果 -->
+
+                <TextView
+                    android:id="@+id/tv_monitor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                     android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/action_settings"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="搜索中"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_17"/>
+            </LinearLayout>
+            
+		    <Button 
+		        android:id="@+id/btn_state_query"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/btn_state_query"
+		        android:textSize="@dimen/textsize_17"
+		        android:visibility="gone"/>
+		    <Button 
+		        android:id="@+id/btn_issued_config"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/btn_issued_config"
+		        android:textSize="@dimen/textsize_17"
+		        android:visibility="gone"/>
+		        
+		    </LinearLayout>
+		    </ScrollView>
+
+    <View style="@style/title_bar_line" />
+
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+        android:layout_height="50dp">
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/title_bar_background"
+	        android:paddingTop="8dp"
+	        android:paddingBottom="8dp"
+	        android:paddingLeft="12dp"
+	        android:gravity="center_vertical"
+	        android:text="@string/community_searchresult"
+	        android:textColor="#ffffff"
+	        android:textSize="15sp" />
+
+	    <ImageView
+	        android:id="@+id/img_slideout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:onClick="cellInfo"
+	        android:src="@drawable/img_slideout" />
+
+	</RelativeLayout>
+
+
+    <View style="@style/title_bar_line" />
+
+    <HorizontalScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+	    
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+	        <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:background="@color/serial_number_check">
+		
+		        <TextView
+		            android:id="@+id/textView2"
+		            android:layout_width="30dp"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:text="@string/tv_serial_number"
+		            android:textColor="#ffffff"
+		            android:paddingTop="10dp"
+		        	android:paddingBottom="10dp"
+		            android:textSize="14.5sp" />
+				<RelativeLayout 
+				    android:id="@+id/rl_frequency"
+				    android:layout_width="70dp"
+				    android:layout_height="match_parent"
+				    android:onClick="frequencyPointDesc">
+			        <TextView
+			            android:id="@+id/frequency_point_desc"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="@string/tv_frequency_point"
+			            android:textColor="#ffffff"
+			            android:layout_centerVertical="true"
+			       		android:layout_centerHorizontal="true"
+			            android:textSize="14.5sp" />
+				</RelativeLayout>
+		
+				<RelativeLayout 
+				    android:id="@+id/rl_LAC"
+				    android:layout_width="70dp"
+				    android:layout_height="match_parent"
+				    android:onClick="lacDesc">
+			        <TextView
+			            android:id="@+id/textView5"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="LAC"
+			            android:textColor="#ffffff"
+			            android:layout_centerVertical="true"
+			       		android:layout_centerHorizontal="true"
+			            android:textSize="14.5sp" />
+			    </RelativeLayout>
+		
+				<RelativeLayout 
+				    android:id="@+id/rl_CID"
+				    android:layout_width="100dp"
+				    android:layout_height="match_parent"
+				    android:onClick="cidDesc">
+			        <TextView
+			            android:id="@+id/textView6"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="CID"
+			            android:textColor="#ffffff"
+			            android:layout_centerVertical="true"
+			       		android:layout_centerHorizontal="true"
+			            android:textSize="14.5sp" />
+			    </RelativeLayout>
+			    
+				<RelativeLayout 
+				    android:id="@+id/rl_pic"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent">
+			        <TextView
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="PCI"
+			            android:textColor="#ffffff"
+			            android:layout_centerVertical="true"
+			       		android:layout_centerHorizontal="true"
+			            android:textSize="14.5sp" />
+			    </RelativeLayout>
+		   		<RelativeLayout 
+				    android:id="@+id/rl_singal"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:onClick="signalStrengthDesc">
+			        <TextView
+			            android:id="@+id/textView4"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="@string/tv_signal_strength"
+			            android:layout_centerHorizontal="true"
+			            android:textColor="#ffffff"
+			            android:layout_centerVertical="true"
+			            android:textSize="14.5sp" />
+			    </RelativeLayout>
+		    	<RelativeLayout 
+				    android:id="@+id/rl_community_snr"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:onClick="signalStrengthDesc">
+				    <TextView
+			            android:id="@+id/textView8"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="@string/community_snr"
+			            android:layout_centerHorizontal="true"
+			            android:layout_centerVertical="true"
+			            android:textColor="#ffffff"
+			            android:paddingLeft="5dp"
+			            android:textSize="14.5sp" />
+			    </RelativeLayout>
+		
+		    	<RelativeLayout 
+				    android:id="@+id/rl_community_freqhz"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:onClick="signalStrengthDesc">
+				    <TextView
+			            android:id="@+id/textView9"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="@string/community_freqhz"
+			            android:layout_centerHorizontal="true"
+			            android:layout_centerVertical="true"
+			            android:textColor="#ffffff"
+			            android:paddingLeft="5dp"
+			            android:textSize="14.5sp" />
+			    </RelativeLayout>
+		    	
+				<RelativeLayout 
+				    android:id="@+id/rl_community_state"
+				    android:layout_width="50dp"
+				    android:layout_height="match_parent"
+				    android:onClick="communityDesc" >
+			        <TextView
+			            android:id="@+id/textView7"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:text="@string/community_state"
+			            android:textColor="#ffffff"
+			            android:layout_centerVertical="true"
+		       			android:layout_centerHorizontal="true"
+			            android:textSize="14.5sp" />
+				</RelativeLayout>
+		    </LinearLayout>
+		
+		    <hrst.singlepawn.view.MyListView
+		        android:id="@+id/lsv_community"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:cacheColorHint="#00000000"
+		        android:divider="@drawable/line_gray"
+		        android:dividerHeight="1dp" >
+		    </hrst.singlepawn.view.MyListView>
+	                
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	@author   邓丰伟
+	@describe 输入诱发号码
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="322dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_title_background"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:text="@string/input_induced_phone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_21" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/input_interface_background"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/induced_number"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/textsize_15" />
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:background="@drawable/bg_edittext"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_15"/>
+        <EditText
+            android:id="@+id/et_tmsi_input"
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:background="@drawable/bg_edittext"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:layout_below="@id/et_input"
+            android:maxLength="8"
+            android:textSize="@dimen/textsize_15"
+            android:digits="abcdefABCDEF1234567890"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search_clear"
+            android:clickable="true"/>
+        </RelativeLayout>
+        <hrst.singlepawn.view.SlideCutListView
+	        android:id="@+id/lv_hislist"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:cacheColorHint="#00000000"
+	        android:listSelector="@null"
+	        android:divider="@null"
+	        android:scrollbars="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9c9a9c"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textSize="@dimen/textsize_15" 
+            android:onClick="cancel"
+            android:textColor="@color/btn_enable"
+            />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ok"
+            android:textColor="@color/btn_enable"
+            android:textSize="@dimen/textsize_15" 
+            android:onClick="ok"
+            />
+    </LinearLayout>
+
+</LinearLayout>

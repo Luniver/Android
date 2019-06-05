@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+       style="@style/dialog_title"
+       android:text="@string/dialog_accuratefinding_config" />
+    
+    <LinearLayout 
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_body"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical">
+        <RadioGroup 
+	        android:id="@+id/rg_accuratefinding_config_select_mode"
+	        android:layout_width="250dp"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	        <RadioButton 
+	            android:id="@+id/rb_accuratefinding_config_default"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@null"
+	            android:button="@null"
+	            android:text="默认"
+	            android:textColor="#ffffff"
+	            android:drawableLeft="@drawable/rg_bg"
+	            android:checked="true"/>
+	        <RadioButton 
+	            android:id="@+id/rb_accuratefinding_config_custom"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@null"
+	            android:button="@null"
+	            android:text="自定义"
+	            android:textColor="#ffffff"
+	            android:drawableLeft="@drawable/rg_bg" />
+	    </RadioGroup>
+	    
+        <LinearLayout 
+            android:id="@+id/ll_accuratefinding_config_time_down"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间下限(ms):"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_accuratefinding_config_time_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edt_input"
+                android:maxLength="9"
+                android:text="800"
+                android:inputType="number"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_accuratefinding_config_time_up"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间上限(ms):"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_accuratefinding_config_time_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edt_input"
+                android:maxLength="9"
+                android:text="6000"
+                android:inputType="number"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_accuratefinding_config_threshold_value"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门限值:"
+                android:textColor="#ffffff"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_accuratefinding_config_threshold_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edt_input"
+                android:maxLength="3"
+                android:text="3"
+                android:inputType="number"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+          
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        	<Button 
+				android:id="@+id/btn_accuratefinding_config_cancel"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/fillet_select_bg"
+				android:textColor="#fff"
+				android:textSize="22sp"
+				android:text="@string/cancel"/>
+       		<Button 
+				android:id="@+id/btn_accuratefinding_config_ok"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="10dp"
+				android:background="@drawable/fillet_select_bg"
+				android:textColor="#fff"
+				android:textSize="22sp"
+				android:text="@string/ok"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

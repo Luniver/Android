@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	@author   赵耿忠
+	@describe 添加号码dialog
+	@date     2014.3.15
+	@Version  1.1.1.3
+	@修改者，修改日期，修改内容
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="322dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_title_background"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="@string/new_input_number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_21" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1d2e3c"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/tv_target_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/target_phone"
+            android:textColor="#52a4d9"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_phonenumber"
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:background="@drawable/bg_edittext"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:maxLength="20"
+            android:textSize="@dimen/textsize_15"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/note_name"
+            android:textColor="#52a4d9"
+            android:textSize="@dimen/textsize_15" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:background="@drawable/bg_edittext"
+            android:inputType="text"
+            android:maxLength="10"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_15" />
+
+        <TextView
+            android:id="@+id/tv_dialog_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/selectgroup"
+            android:textColor="#52a4d9"
+            android:textSize="@dimen/textsize_15" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp" >
+
+            <TextView
+                android:id="@+id/tv_group"
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/triangle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9c9a9c"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textColor="#5a676f"
+            android:textSize="@dimen/textsize_15" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/ok"
+            android:textColor="#5a676f"
+            android:textSize="@dimen/textsize_15" />
+    </LinearLayout>
+
+</LinearLayout>

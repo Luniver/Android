@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="#03214e" >
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_search_unit"
+            android:paddingRight="3dp"
+            android:text="0"
+            android:visibility="invisible"
+            android:textColor="#03fc36"
+            android:textSize="@dimen/textsize_19" />
+
+        <TextView
+            android:id="@+id/tv_search_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="@string/tv_search_unit"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_19" />
+    </RelativeLayout>
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="vertical">
+	        	<TextView 
+	        	    android:id="@+id/tv_wcdma_captrue_mode"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="@string/tv_gsm_captrue_mode"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:textColor="@color/white"/>
+	      		<RadioGroup
+				    android:id="@+id/rg_wcdma_captrue_mode"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="15dp"
+				    android:orientation="horizontal" >
+				
+				    <RadioButton
+				        android:id="@+id/rb_wcdma_captrue_mode_rule"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="常规"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				
+				    <RadioButton
+				        android:id="@+id/rb_wcdma_captrue_mode_multiple_capture"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+			   	        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="特殊"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				
+				</RadioGroup>
+	       		<TextView 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="扫描方式"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:textColor="@color/white"/>
+	      		<RadioGroup
+				    android:id="@+id/rg_wcdma_search_mode"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="15dp"
+				    android:orientation="horizontal" >
+				
+				    <RadioButton
+				        android:id="@+id/rb_wcdma_search_mode_blind"
+	  			        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="盲搜"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				
+				    <RadioButton
+				        android:id="@+id/rb_wcdma_search_mode_fixed"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+			   	        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="定频"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				
+				</RadioGroup>
+				<LinearLayout 
+				    android:id="@+id/ll_wcdma_freqs_1"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="5dp"
+				    android:visibility="gone"
+				    android:orientation="horizontal" >
+				    <EditText 
+				        android:id="@+id/edt_wcdma_freq_1"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+	   			        android:hint="@string/edt_freq_1"
+	                    android:inputType="number"
+	                    android:maxLength="5"
+				        android:gravity="center_horizontal"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+	   			    <EditText 
+				        android:id="@+id/edt_wcdma_freq_2"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_2"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+	   			    <EditText 
+				        android:id="@+id/edt_wcdma_freq_3"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_3"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+	   			    <EditText 
+				        android:id="@+id/edt_wcdma_freq_4"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:layout_marginRight="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_4"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+				</LinearLayout>
+				<LinearLayout 
+				    android:id="@+id/ll_wcdma_freqs_2"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="5dp"
+				    android:visibility="gone"
+				    android:orientation="horizontal" >
+				    <EditText 
+				        android:id="@+id/edt_wcdma_freq_5"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_5"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+	   			    <EditText 
+				        android:id="@+id/edt_wcdma_freq_6"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_6"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+	   			    <EditText 
+				        android:id="@+id/edt_wcdma_freq_7"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_7"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+	   			    <EditText 
+				        android:id="@+id/edt_wcdma_freq_8"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="5dp"
+				        android:layout_marginRight="5dp"
+				        android:gravity="center_horizontal"
+				        android:hint="@string/edt_freq_8"
+				        android:inputType="number"
+	                    android:maxLength="5"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+				</LinearLayout>
+				<View style="@style/line_gray_night" />
+	
+	       		<TextView 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="匹配关系"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:visibility="gone"
+				    android:textColor="@color/white"/>
+	      		<RadioGroup
+				    android:id="@+id/rg_wcdma_mate_mode"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="15dp"
+				    android:visibility="gone"
+				    android:orientation="horizontal" >
+				
+				    <RadioButton
+				        android:id="@+id/rb_wcdma_mate_mode_and"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+				        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="与"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				
+				    <RadioButton
+				        android:id="@+id/rb_wcdma_mate_mode_or"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+			   	        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="或"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				</RadioGroup>
+	      		<TextView 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="启动模式"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:visibility="gone"
+				    android:textColor="@color/white"/>
+	     		<RadioGroup
+				    android:id="@+id/rg_wcdma_startup_mode"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="15dp"
+				    android:visibility="gone"
+				    android:orientation="horizontal" >
+				
+				    <RadioButton
+				        android:id="@+id/rg_wcdma_startup_mode_manual"
+				        android:layout_width="0dp"
+				        android:layout_weight="2"
+				        android:layout_height="wrap_content"
+				        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="手动"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				
+				    <RadioButton
+				        android:id="@+id/rg_wcdma_startup_mode_fixed_time"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+			   	        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="定时"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				    
+	  			    <RadioButton
+				        android:id="@+id/rg_wcdma_startup_mode_mate"
+				        android:layout_width="0dp"
+				        android:layout_weight="1"
+				        android:layout_height="wrap_content"
+			   	        android:background="@null"
+						android:button="@null"
+						android:drawableLeft="@drawable/rg_bg"
+				        android:text="匹配"
+				        android:textColor="#ffffff"
+				        android:textSize="@dimen/textsize_15" />
+				</RadioGroup>
+				<EditText 
+				    android:id="@+id/edt_wcdma_time_out"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:layout_gravity="center_horizontal"
+			        android:textColor="#ffffff"
+			        android:layout_marginTop="5dp"
+			        android:hint="超时时间"
+			        android:inputType="number"
+			        android:maxLength="4"
+			        android:visibility="gone"
+			        android:background="@drawable/edt_input"/>
+	        	<TextView 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="定位信息"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:textColor="@color/white"/>
+				<RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/first_height_52.5"
+	                android:background="@drawable/textview_selector"
+	                android:gravity="center_vertical" >
+	
+	                <TextView
+	                    android:id="@+id/tv_wcdma_target_number"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="10dp"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:textColor="@color/light_blue"
+	                    android:textSize="@dimen/textsize_17" />
+	
+	                <LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_alignParentLeft="true"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:gravity="center_vertical"
+	                    android:paddingRight="5dp" >
+	
+	                    <TextView
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="10dp"
+	                        android:clickable="false"
+	                        android:drawablePadding="40dp"
+	                        android:drawableRight="@drawable/input"
+	                        android:focusable="false"
+	                        android:focusableInTouchMode="false"
+	                        android:gravity="center_vertical"
+	                        android:textColor="@color/light_blue"
+	                        android:text="@string/str_target_number"
+	                        android:textSize="@dimen/textsize_19" />
+	                </LinearLayout>
+	            </RelativeLayout>
+	            
+				<View style="@style/line_gray_night" />
+				
+				<RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/first_height_52.5"
+	                android:background="@drawable/textview_selector"
+	                android:gravity="center_vertical"
+	                android:onClick="inputTargetIMSI" >
+	
+	                <TextView
+	                    android:id="@+id/tv_wcdma_target_imsi"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="10dp"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:textColor="@color/light_blue"
+	                    android:hint="@string/required"
+	                    android:textSize="@dimen/textsize_17" />
+	
+	                <LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_alignParentLeft="true"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:gravity="center_vertical"
+	                    android:paddingRight="5dp" >
+	
+	                    <TextView
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="10dp"
+	                        android:clickable="false"
+	                        android:drawablePadding="39dp"
+	                        android:drawableRight="@drawable/input"
+	                        android:focusable="false"
+	                        android:focusableInTouchMode="false"
+	                        android:gravity="center_vertical"
+	                        android:textColor="@color/light_blue"
+	                        android:text="@string/str_target_imsi"
+	                        android:textSize="@dimen/textsize_19" />
+	                </LinearLayout>
+	            </RelativeLayout>
+				<View style="@style/line_gray_night" />
+				<RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/first_height_52.5"
+	                android:background="@drawable/textview_selector"
+	                android:gravity="center_vertical"
+	                android:onClick="inputTargetTMSI" >
+	
+	                <TextView
+	                    android:id="@+id/tv_wcdma_target_tmsi"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="10dp"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:hint="@string/optional"
+	                    android:focusableInTouchMode="false"
+	                    android:textColor="@color/light_blue"
+	                    android:textSize="@dimen/textsize_17" />
+	
+	                <LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_alignParentLeft="true"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:gravity="center_vertical"
+	                    android:paddingRight="5dp" >
+	
+	                    <TextView
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="10dp"
+	                        android:clickable="false"
+	                        android:drawablePadding="33dp"
+	                        android:drawableRight="@drawable/input"
+	                        android:focusable="false"
+	                        android:focusableInTouchMode="false"
+	                        android:gravity="center_vertical"
+	                        android:textColor="@color/light_blue"
+	                        android:text="@string/str_target_tmsi"
+	                        android:textSize="@dimen/textsize_19" />
+	                </LinearLayout>
+	            </RelativeLayout>
+				<View style="@style/line_gray_night" />
+				<RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/first_height_52.5"
+	                android:background="@drawable/textview_selector"
+	                android:gravity="center_vertical"
+	                android:onClick="inputSmsThreshold" >
+	
+	                <TextView
+	                    android:id="@+id/tv_wcdma_sms_threshold"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="10dp"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:hint="@string/required"
+	                    android:focusableInTouchMode="false"
+	                    android:textColor="@color/light_blue"
+	                    android:textSize="@dimen/textsize_17" />
+	
+	                <LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_alignParentLeft="true"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:gravity="center_vertical"
+	                    android:paddingRight="5dp" >
+	
+	                    <TextView
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="10dp"
+	                        android:clickable="false"
+	                        android:drawablePadding="39dp"
+	                        android:drawableRight="@drawable/input"
+	                        android:focusable="false"
+	                        android:focusableInTouchMode="false"
+	                        android:gravity="center_vertical"
+	                        android:textColor="@color/light_blue"
+	                        android:text="短信门限"
+	                        android:textSize="@dimen/textsize_19" />
+	                </LinearLayout>
+	            </RelativeLayout>
+				<View style="@style/line_gray_night" />
+				<RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="@dimen/first_height_52.5"
+	                android:background="@drawable/textview_selector"
+	                android:gravity="center_vertical"
+	                android:onClick="inputCallThreshold" >
+	
+	                <TextView
+	                    android:id="@+id/tv_wcdma_call_threshold"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="10dp"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:hint="@string/required"
+	                    android:focusableInTouchMode="false"
+	                    android:textColor="@color/light_blue"
+	                    android:textSize="@dimen/textsize_17" />
+	
+	                <LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:layout_alignParentLeft="true"
+	                    android:clickable="false"
+	                    android:focusable="false"
+	                    android:focusableInTouchMode="false"
+	                    android:gravity="center_vertical"
+	                    android:paddingRight="5dp" >
+	
+	                    <TextView
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="10dp"
+	                        android:clickable="false"
+	                        android:drawablePadding="39dp"
+	                        android:drawableRight="@drawable/input"
+	                        android:focusable="false"
+	                        android:focusableInTouchMode="false"
+	                        android:gravity="center_vertical"
+	                        android:textColor="@color/light_blue"
+	                        android:text="电话门限"
+	                        android:textSize="@dimen/textsize_19" />
+	                </LinearLayout>
+	            </RelativeLayout>
+				<View style="@style/line_gray_night" />
+				
+	
+				<TextView 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="TAC/CID"
+				    android:visibility="gone"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:textColor="@color/white"/>
+				<LinearLayout 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:visibility="gone"
+				    android:orientation="horizontal">
+				    <EditText 
+				        android:id="@+id/edt_wcdma_tac_cid_1"
+				        android:layout_width="0dp"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:hint="TAC/CID_1"
+				        android:layout_marginLeft="5dp"
+	  			        android:gravity="center_horizontal"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input" />
+				    <EditText 
+				        android:id="@+id/edt_wcdma_tac_cid_2"
+				        android:layout_width="0dp"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:hint="TAC/CID_2"
+				        android:layout_marginLeft="5dp"
+				        android:layout_marginRight="5dp"
+	   			        android:gravity="center_horizontal"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input" />
+				</LinearLayout>
+				<LinearLayout 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="5dp"
+				    android:visibility="gone"
+				    android:orientation="horizontal">
+				    <EditText 
+				        android:id="@+id/edt_wcdma_tac_cid_3"
+				        android:layout_width="0dp"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:hint="TAC/CID_3"
+	   			        android:layout_marginLeft="5dp"
+	   			        android:gravity="center_horizontal"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+				    <EditText 
+				        android:id="@+id/edt_wcdma_tac_cid_4"
+				        android:layout_width="0dp"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:hint="TAC/CID_4"
+	   			        android:gravity="center_horizontal"
+	  			        android:layout_marginLeft="5dp"
+				        android:layout_marginRight="5dp"
+				        android:textColor="#ffffff"
+				        android:background="@drawable/edt_input"/>
+				</LinearLayout>
+				<View style="@style/line_gray_night"
+				    android:visibility="gone" />
+				<TextView 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/bg_choosemode"
+				    android:text="超时时间"
+				    android:visibility="gone"
+				    android:gravity="center_vertical|center_horizontal"
+				    android:textSize="@dimen/textsize_15"
+				    android:textColor="@color/white"/>
+				
+	<!-- 			<EditText 
+				    android:id="@+id/edt_wcdma_time_out"
+				    android:layout_width="200dp"
+				    android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:layout_gravity="center_horizontal"
+			        android:textColor="#ffffff"
+			        android:layout_marginTop="5dp"
+			        android:hint="超时时间"
+			        android:visibility="gone"
+			        android:background="@drawable/edt_input"/> -->
+		    </LinearLayout>        
+	        <Button
+		        android:id="@+id/btn_search_wcdma"
+		        android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:background="@drawable/btn_next_style"
+		        android:text="@string/locate"
+		        android:textColor="@color/white"
+		        android:textSize="@dimen/textsize_19" />
+	    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
